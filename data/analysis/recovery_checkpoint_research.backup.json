@@ -1,0 +1,17 @@
+{
+  "last_video_id": "yZ9hNDlqwjU",
+  "index": 18,
+  "timestamp": "2026-06-04T10:30:20.886227",
+  "metrics": {
+    "success": 18,
+    "fail": 0,
+    "blocked": 0,
+    "total_words": 23247,
+    "total_segments": 4284,
+    "language_distribution": {
+      "en": 15,
+      "hi": 3
+    },
+    "error_distribution": {}
+  }
+}

@@ -1,0 +1,5 @@
+cluster,total_rows,yoga_hits,hit_ratio
+cluster_4.csv,189,189,1.0
+cluster_2.csv,144,141,0.9791666666666666
+cluster_6.csv,111,109,0.9819819819819819
+cluster_0.csv,65,59,0.9076923076923077

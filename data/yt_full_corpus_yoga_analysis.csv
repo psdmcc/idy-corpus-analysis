@@ -1,0 +1,5 @@
+cluster,total_rows,yoga_rows,yoga_ratio,full_discourse_rows,fragment_rows,boilerplate_rows
+cluster_4.csv,189,189,1.0,0,189,0
+cluster_2.csv,144,141,0.9791666666666666,0,141,0
+cluster_6.csv,111,109,0.9819819819819819,0,109,0
+cluster_0.csv,65,59,0.9076923076923077,0,59,0

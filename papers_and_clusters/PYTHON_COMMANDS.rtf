@@ -1,0 +1,1034 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 LucidaGrande;
+\f3\froman\fcharset0 Times-Roman;\f4\fmodern\fcharset0 Courier;\f5\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red109\green109\blue109;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0;\cssrgb\c50196\c50196\c50196;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17180\viewh10760\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 put in step 18\
+df["register"] = df["source_file"].apply(\
+    lambda x: "modern" if "sanskrit_only_iast" in x else "classical"\
+)\
+\
+\
+Step 10: Register geometry (UMAP + distance matrix + interpretation layer)
+\f1\b0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+https://github.com/psdmcc/vaartaa-sanskrit-news/blob/main/cluster_report.txt\
+\
+\
+PYTHON COMMANDS\
+\
+\
+Commands:\
+  install                     Install packages.\
+  lock                        Generate a lock file.(venv) croma@MacBook-Pro-2 sanskrit-vaartaa-corpus % rm data/features/*.csv\
+python scripts/step17_strict_clean.py\
+python scripts/step18_extract_features_v2.py\
+python scripts/step16_feature_validation_v2.py\
+Found 17 category files\
+Cleaned: classical_prose.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/classical_prose.csv (3 docs)\
+Cleaned: puranic.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/puranic.csv (2 docs)\
+Cleaned: mahakavya.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/mahakavya.csv (4 docs)\
+Cleaned: sastra.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/sastra.csv (1 docs)\
+Cleaned: sutra.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/sutra.csv (3 docs)\
+Cleaned: philosophical.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/philosophical.csv (1 docs)\
+Cleaned: smriti.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/smriti.csv (3 docs)\
+Cleaned: classical_corpus.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/eval_only_classical_corpus.csv (31 docs)\
+Cleaned: vedic.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/vedic.csv (3 docs)\
+Cleaned: classical_drama.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/classical_drama.csv (2 docs)\
+Cleaned: epic.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/epic.csv (1 docs)\
+Cleaned: tantra.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/tantra.csv (1 docs)\
+Cleaned: medical.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/medical.csv (2 docs)\
+Cleaned: classical_literary.csv 
+\f2 \uc0\u8594 
+\f1  data/processed_clean_v2/classical_literary.csv (2 docs)\
+\
+DONE\
+Total documents: 59\
+Found 16 input files (training only)\
+Processed: classical_corpus.csv (31 docs)\
+Processed: classical_drama.csv (2 docs)\
+Processed: classical_literary.csv (2 docs)\
+Processed: classical_prose.csv (3 docs)\
+Processed: epic.csv (1 docs)\
+Processed: eval_only_classical_corpus.csv (31 docs)\
+Processed: mahakavya.csv (4 docs)\
+Processed: medical.csv (2 docs)\
+Processed: philosophical.csv (1 docs)\
+Processed: puranic.csv (2 docs)\
+Processed: sanskrit_only_iast.csv (173 docs)\
+Processed: sastra.csv (1 docs)\
+Processed: smriti.csv (3 docs)\
+Processed: sutra.csv (3 docs)\
+Processed: tantra.csv (1 docs)\
+Processed: vedic.csv (3 docs)\
+\
+STEP 18 COMPLETE\
+Saved: data/features/register_features_v2.csv\
+Documents: 263\
+Loading corpus...\
+Modern tokens: 0\
+Classical tokens: 0\
+\
+STEP 16 COMPLETE\
+Saved: data/features/feature_validation_v2.txt\
+  download                    Download packages.\
+  uninstall                   Uninstall packages.\
+  freeze                      Output installed packages in requirements format.\
+  inspect                     Inspect the python environment.\
+  list                        List installed packages.\
+  show                        Show information about installed packages.\
+  check                       Verify installed packages have compatible\
+dependencies.\
+  config                      Manage local and global configuration.\
+  search                      Search PyPI for packages.\
+  cache                       Inspect and manage pip's wheel cache.\
+  index                       Inspect information available from package\
+indexes.\
+  wheel                       Build wheels from your requirements.\
+  hash                        Compute hashes of package archives.\
+  completion                  A helper command used for command completion.\
+  debug                       Show information useful for debugging.\
+  help                        Show help for commands.\
+\
+General Options:\
+  -h, --help                  Show help.\
+  --debug                     Let unhandled exceptions propagate outside the\
+                              main subroutine, instead of logging them to\
+                              stderr.\
+  --isolated                  Run pip in an isolated mode, ignoring\
+                              environment variables and user configuration.\
+  --require-virtualenv        Allow pip to only run in a virtual environment;\
+                              exit with an error otherwise.\
+  --python <python>           Run pip with the specified Python interpreter.\
+  -v, --verbose               Give more output. Option is additive, and can be\
+                              used up to 3 times.\
+  -V, --version               Show version and exit.\
+  -q, --quiet                 Give less output. Option is additive, and can be\
+                              used up to 3 times (corresponding to WARNING,\
+                              ERROR, and CRITICAL logging levels).\
+  --log <path>                Path to a verbose appending log.\
+  --no-input                  Disable prompting for input.\
+  --keyring-provider <keyring_provider>\
+                              Enable the credential lookup via the keyring\
+                              library if user input is allowed. Specify which\
+                              mechanism to use [auto, disabled, import,\
+                              subprocess]. (default: auto)\
+  --proxy <proxy>             Specify a proxy in the form\
+                              scheme://[user:passwd@]proxy.server:port.\
+  --retries <retries>         Maximum attempts to establish a new HTTP\
+                              connection. (default: 5)\
+  --timeout <sec>             Set the socket timeout (default 15 seconds).\
+  --exists-action <action>    Default action when a path already exists:\
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.\
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted,\
+                              even though it does not have valid or any HTTPS.\
+  --cert <path>               Path to PEM-encoded CA certificate bundle. If\
+                              provided, overrides the default. See 'SSL\
+                              Certificate Verification' in pip documentation\
+                              for more information.\
+  --client-cert <path>        Path to SSL client certificate, a single file\
+                              containing the private key and the certificate\
+                              in PEM format.\
+  --cache-dir <dir>           Store the cache data in <dir>.\
+  --no-cache-dir              Disable the cache.\
+  --disable-pip-version-check\
+                              Don't periodically check PyPI to determine\
+                              whether a new version of pip is available for\
+                              download. Implied with --no-\
+                              index.\
+  --no-color                  Suppress colored output.\
+  --use-feature <feature>     Enable new functionality, that may be backward\
+                              incompatible.\
+  --use-deprecated <feature>  Enable deprecated functionality, that will be\
+                              removed in the future.\
+  --resume-retries <resume_retries>\
+                              Maximum attempts to resume or restart an\
+                              incomplete download. (default: 5)\
+\
+\
+data/source/video_ids.txt  
+\f2 \uc0\u8594 
+\f1  1130 videos\
+\
+ls scripts\
+ls scripts/error_inventory.py\
+\
+\
+python -m src.ingestion.test_pipeline\
+\
+\
+IP ADDRESS NUBIA 10.11.12.89.\
+previous honeypuffz_5 = {\field{\*\fldinst{HYPERLINK "http://192.168.0.5/"}}{\fldrslt http://192.168.0.5/}}\
+current 11.10.87.10\
+\
+\
+\
+reset\
+\
+mkdir -p scripts/youtube\
+\
+touch scripts/youtube/idy_pipeline_v3.py\
+\
+\
+DUMB MODE\
+	TERM=vt100 nano file.py\
+\
+LINE NOS\
+	nano -l file.py\
+\
+COMBO\
+	TERM=vt100 nano -l file.py\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 nano -w file.txt\
+less -S file.txt
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+nano scripts/youtube/idy_pipeline_v4.py\
+\
+	nano 
+\f4 \cf2 \expnd0\expndtw0\kerning0
+scripts/find_missing_metadata.py
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\fs26 \cf3 \CocoaLigature0 import pandas as pd
+\f1\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+python -m src.core.dashboard\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://localhost:8000"}}{\fldrslt 
+\f4 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 http://localhost:8000}}
+\f4 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://127.0.0.1:8000/dashboard/stats"}}{\fldrslt \cf0 http://127.0.0.1:8000/dashboard/stats}}\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 uvicorn src.core.dashboard:app --host 0.0.0.0 --port 8000\
+\
+python run_ingestion.py\
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+DIRECT SEARCH FOR SECTION\
+	grep -n "Caption extraction" src/ingestion/youtube.py\
+\
+SHOW LINE NOS\
+	nl -ba nano src/ingestion/youtube.py\
+\
+VIEW A SECTION\
+	sed -n '37,116p' src/ingestion/youtube.py\
+\
+SAVE TO SEPARATE FILE\
+	sed -n '37,116p' src/ingestion/youtube.py > caption_debug.py\
+		CONFIRM FILE \
+			ls -l caption_debug.py\
+			OPEN \
+				nano caption_debug.py\
+			VIEW\
+				less -S caption_debug.py\
+\
+NANO - JUMP2LINE - LINE #S\
+	nano -l +37 src/ingestion/youtube.py\
+\
+\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1752\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2016\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Extract part of file\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4 \cf2 sed ... > file
+\f3 \cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth872\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1296\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 View file\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4 \cf2 less file
+\f3 \cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth766\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1296\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 Edit file\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4 \cf2 nano file
+\f3 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+pwd\
+/Users/croma/Documents/IDY_Project/papers/arxiv\
+\
+	nano papers/arxiv/main.tex\
+\
+	open -a TextEdit papers/arxiv/main.tex\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 cd papers/arxiv\
+\
+\'97\
+\
+TO BUILD A PDF\
+\
+IF ALREADY IN THE ARXIV DIRECTORY:\
+	pdflatex main.tex\
+\
+IF NOT:\
+	cd /Users/croma/Documents/IDY_Project/papers/arxiv\
+pdflatex main.tex\
+\
+	pdflatex main.tex\
+	pdflatex main.tex\
+\
+		open main.pdf\
+\
+OR\
+	cd /Users/croma/Documents/IDY_Project\
+pdflatex -output-directory=papers/arxiv papers/arxiv/main.tex\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+TO OPEN A CSV FILE\
+	open unique_channels.csvs\
+\
+\
+@book\{prasad2025,\
+author = \{Prasad, Urvashi and Mahesshwari, Ankeetaa and Kaur, Mehek\},\
+title = \{The Research Impact of International Day of Yoga: A Scientometric Analys\
+    is of Yoga's Global Influence\},\
+publisher = \{Pahl\{\\'e\} India Foundation\},\
+address = \{Guwahati\},\
+year = \{2025\}\
+note = \{https://naturopathyday.in/upload/Pahle%20India%20Yoga%20Book%20VI%2013-06\
+    -25.pdf\}\
+\
+@misc\{un2016a,\
+ 41   author = \{\{United Nations\}\},\
+ 42   title = \{Media Advisory: Yoga for SDGs, UN International Day of Yoga\},\
+ 43   year = \{2016\},\
+ 44   note = \{Retrieved February 11, 2026, from \\url\{https://www.un.org/sustainabledeve\
+    lopment/blog/2016/06/media-advisory-yoga-for-sdgs-un-international-day-of-yoga/\}\}\
+ 45 \}\
+\
+\
+FIND A FILE\
+	find . -name "dsi_rows.csv"\
+	OR NO \'93 \'93\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0      find . -name relist_table2.py\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+TO OPEN FILE\
+	cat relist_table2.py\
+OR\
+	nano relist_table2.py\
+\
+TO BUILD BIBLIOGRAPHY\
+	pdflatex main.tex\
+	bibtex main\
+	pdflatex main.tex\
+	pdflatex main.tex\
+\
+THIS CLEARS CACHE\
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 rm -f main.aux main.bbl main.blg main.log\
+pdflatex main\
+bibtex main\
+pdflatex main\
+pdflatex main
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 @article\{transformative2023,...\}\
+@article\{impact2024,...\}\
+@inproceedings\{kolar2015,...\}\
+@inproceedings\{kolar2016,...\}\
+@article\{advocacy2016,...\}\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 From 
+\f4 papers/arxiv
+\f3 :\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+	pdflatex main.tex\
+	bibtex main\
+	pdflatex main.tex\
+	pdflatex main.tex\
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+Use citations in text\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3\b0\fs24 \cf2 Examples:\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+	\\citep\{choreographing2020\}\
+	\
+	\\citep\{softpower2020, unintended2018\}\
+\
+	According to \\citet\{choreographing2020\}, ...\
+\
+\
+\
+\
+\'97\
+\
+TO RUN PYTHON DIRECTLY FROM BASH\
+	python - <<'PY'\
+import pandas as pd\
+\
+df = pd.read_csv("dsi_rows.csv")\
+\
+print(df["channel"].value_counts().to_string())\
+PY\
+\
+\
+\
+OPEN DIRECTLY AT LINE \
+	nano +37 src/ingestion/youtube.py\
+\
+DEBUGGING WORKFLOW \
+	sed -n '37,116p' file.py | less -S\
+\
+sed -n '1,120p' step14_register_profile.py | less -S\
+nano scripts/step14_register_profile.py\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf2 \expnd0\expndtw0\kerning0
+mkdir -p scripts
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+cd ~/sanskrit-vaartaa-corpus\
+source venv/bin/activate\
+\
+python3 scripts/youtube/idy_pipeline_v4.py\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\fs22 \cf3 \CocoaLigature0 cd ~/Documents/IDY_Project\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+source venv/bin/activate
+\f1\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\fs22 \cf3 \CocoaLigature0 cd ~/Documents/IDY_Projectyt-dlp --list-subs "https://www.youtube.com/watch?v=n6HfFdQvkws"\
+\
+source venv/bin/activate
+\f1\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\'97\'97\
+EG OF SCRIPT TO PUSH TO GITHUB\
+	
+\f4\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 git add figures/yoga_sustainability_ngrams.png src/plot_ngrams.py git commit -m "Update repository with completed thematic discourse map visualization" git push origin main
+\f1\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+\
+\'97\'97\
+python scripts/youtube/idy_pipeline_v4.py\
+\
+pip install youtube-transcript-api\
+\
+\
+POLLING LIVE\
+	watch -n 1 "ls -lt src/ingestion"\
+\
+LIVE CPU USAGe\
+	top\
+		1 - shows usage  / q = quit\
+\
+THIS GIVES ALL FILES IN PROJECT FOLDER\
+	find . -type f -name "*.py" | grep -i youtube\
+\
+find. -type f -name \'93relist_table2.py\'94\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+yt-dlp \\\
+--write-auto-sub \\\
+--write-sub \\\
+--sub-langs ".*-orig,en-orig,ja-orig,hi-orig,mr-orig" \\\
+--skip-download \\\
+"https://youtube.com/watch?v=hJbRpHZr_d0"\
+\
+
+\f5\fs22 \cf3 \CocoaLigature0 yt-dlp \\                                   \
+--write-auto-sub \\\
+--write-sub \\\
+--sub-langs ".*-orig,en-orig,ja-orig,hi-orig,mr-orig" \\\
+--skip-download \\\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=8ch8_AX-7ZU"}}{\fldrslt https://www.youtube.com/watch?v=8ch8_AX-7ZU}}\
+\
+yt-dlp \\                                   \
+--write-auto-sub \\\
+--write-sub \\\
+--sub-langs ".*-orig" \\\
+--skip-download \\\
+https://www.youtube.com/watch?v=hJsRLYfa5vA
+\f1\fs24 \cf0 \CocoaLigature1 \
+\
+\
+source venv/bin/activate\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+v\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\fs22 \cf3 \CocoaLigature0 /usr/local/bin/node\
+\
+idy_youtube_video_ids.txt\
+\
+/usr/local/bin/node\
+\
+\
+\'97\
+\
+yt-dlp \\\
+--js-runtimes node:/usr/local/bin/node \\\
+--sleep-requests 20 \\\
+--cookies-from-browser brave \\\
+--write-auto-sub \\\
+--sub-langs ".*-orig,orig" \\\
+--skip-download \\\
+--output "/Users/croma/Documents/IDY_Project/data/transcripts/temp/%(id)s.%(ext)s" \\\
+"https://www.youtube.com/watch?v=n6HfFdQvkws"\
+\
+\
+"--js-runtimes",\
+"node:/usr/local/bin/node",\
+\
+"--js-runtimes",\
+"node:/opt/homebrew/bin/node",\
+\
+\
+\'97\'97\
+\
+audio\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 For your IDY pipeline, the ideal workflow is:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Try YouTube captions (
+\f4 yt-dlp --write-auto-sub
+\f3 ) \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+If no captions exist:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1\cf2 \kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f3 	}\expnd0\expndtw0\kerning0
+download audio with yt-dlp \
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f3 	}\expnd0\expndtw0\kerning0
+run faster-whisper \
+\ls1\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f2 \uc0\u9702 
+\f3 	}\expnd0\expndtw0\kerning0
+save transcript as 
+\f4 .txt
+\f3  \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+Continue with your existing processing \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 That avoids losing videos simply because YouTube has no subtitles.\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 https://youtube.com/playlist?list=PLxx0m3vtiqMYZTRHdh8dlpAlcnV4VuEkI&si=3QBxUhmbKz7DWrr2\
+https://youtube.com/playlist?list=PLxx0m3vtiqMYZTRHdh8dlpAlcnV4VuEkI&si=3QBxUhmbKz7DWrr2\
+\pard\pardeftab720\partightenfactor0
+\cf2 yt-dlp \\\
+--flat-playlist \\\
+--dump-json \\\
+"\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 https://youtube.com/playlist?list=PLxx0m3vtiqMYZTRHdh8dlpAlcnV4VuEkI&si=3QBxUhmbKz7DWrr2\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 " \\\
+> playlist.jsonl\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+IDY 2023 DD playlist - 54 videos\
+	{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=aWLNTOxZt6U&list=PLxx0m3vtiqMalJX9XRP1S-GTggoTxQ1YW&index=10"}}{\fldrslt https://www.youtube.com/watch?v=aWLNTOxZt6U&list=PLxx0m3vtiqMalJX9XRP1S-GTggoTxQ1YW&index=10}}\
+IDY 2025 DD playlist - 200 videos\
+	{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=OPQujRyMEDc&list=PLxx0m3vtiqMbgHcBTzyiRm88jXuwTD0JH"}}{\fldrslt https://www.youtube.com/watch?v=OPQujRyMEDc&list=PLxx0m3vtiqMbgHcBTzyiRm88jXuwTD0JH}} \
+\
+1130 DD vaartaa news metadata \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 playlist_full.json \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+\'97\'97\
+python -m src.ingestion.youtube\
+\
+BLACK + file = checking for formatting/indenting issues\
+black src/ingestion/youtube.py\
+\
+HOW TO NORMALIZE A SCRIPT\
+python - <<'EOF'\
+from pathlib import Path\
+\
+p = Path("src/ingestion/youtube_caption_only.py")\
+\
+text = p.read_text()\
+\
+# replace tabs with 4 spaces\
+text = text.replace("\\t", "    ")\
+\
+p.write_text(text)\
+\
+print("tabs removed")\
+EOF\
+\
+\
+\
+HOW TO ARCHIVE A SCRIPT\
+	(venv) croma@MacBook-Pro-2 sanskrit-vaartaa-corpus % mkdir -p archive\
+\
+cp src/ingestion/youtube.py \\\
+   archive/youtube_whisper_backup_$(date +%Y%m%d_%H%M%S).py\
+(venv) croma@MacBook-Pro-2 sanskrit-vaartaa-corpus % ls archive\
+youtube_whisper_backup_20260610_120858.py\
+\
+HOW TO MAKE A COPY\
+	cp src/ingestion/youtube.py src/ingestion/youtube_caption_only.py\
+\
+HOW TO RUN A SCRIPT\
+	python -m src.ingestion.youtube_caption_only\
+\
+	python src/ingestion/youtube_caption_only.py\
+\
+OPEN IN T2 TO INSPECT \
+	ps aux | grep python\
+\
+KILL\
+	kill 51436\
+	ps -p 51436\
+	kill -9 51436\
+	ps -p 51436\
+		kill %1.  (% = shell #)\
+		ps aux | grep "src.ingestion.youtube"\
+\
+LIST SUSPENDED JOBS\
+	jobs -l\
+\
+\
+\
+Exit Python:\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+>>> exit()\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 Then check where you are:\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+which python\
+which python3\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 You should probably see something like:\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+/usr/bin/python\
+/usr/local/bin/python3\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 Now reactivate your virtual environment:\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+source venv/bin/activate\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 You should get:\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+(venv) croma@MacBook-Pro-2 IDY_Project %\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 Then verify:\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+python --version\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f3 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\'97\'97\
+yt-dlp \\\
+  --write-info-json \\\
+  --extract-audio \\\
+  --audio-format mp3 \\\
+  -o "data/audio/%(id)s.%(ext)s" \\\
+  \'93{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=V4QOUPfdhzk&pp=ygUIaWR5IDIwMTU%3D"}}{\fldrslt https://www.youtube.com/watch?v=V4QOUPfdhzk}}\'94\
+\
+\
+\
+\'97\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs24 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 nano scripts/extract_metadata.py\
+\
+\
+\
+\
+\
+\
+\
+nano scripts/extract_entities.py\
+\
+\
+import spacy\
+import pandas as pd\
+\
+nlp = spacy.load("en_core_web_sm")\
+\
+df = pd.read_csv("data/corpus/corpus.csv")\
+\
+results = []\
+\
+for _, row in df.iterrows():\
+\
+    doc = nlp(str(row["text"]))\
+\
+    for ent in doc.ents:\
+\
+        results.append(\{\
+            "video_id": row["video_id"],\
+            "entity": ent.text,\
+            "label": ent.label_\
+        \})\
+\
+pd.DataFrame(results).to_csv(\
+    "data/corpus/entities.csv",\
+    index=False\
+)
+\f5\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+\
+\
+\
+\
+\'97\
+python scripts/extract_entities.py\
+\
+\
+\
+\
+\
+\
+\
+\'97\
+\
+\
+actors.csv\
+\
+\
+entity,type\
+Narendra Modi,person\
+AYUSH,organization\
+United Nations,organization\
+Shanti Mandir,organization\
+Art of Living,organization\
+Isha Foundation,organization\
+\
+(venv) croma@MacBook-Pro-2 sanskrit-vaartaa-corpus % ls data/transcripts\
+--621egpQ08.txt ByIOhtgx648.txt PCZxEvQGzWI.txt _gAOLKNnfCI.txt nH-o5W2_YxY.txt\
+-1T1JQf5i5s.txt C2Eh6a2pmbA.txt PCq6Y93HE-Q.txt _hDNITutB3g.txt nLwrdRqyClc.txt\
+-3QfdBqU9W0.txt C83SbWRHbh8.txt PGbjCVcqsoA.txt _jBnTtJKhgA.txt nNv9crXCwvE.txt\
+-45ylGvuVi0.txt CDrm6jXSLd8.txt PGi47n1OZ04.txt _ucIXMzdl4c.txt nSzB1jdmaNY.txt\
+-IIAzYQp4cc.txt C_thAR4qQt4.txt PM_mx0_3014.txt aBMvbBjyXNw.txt nVClqutmGPk.txt\
+-JsZVOInRFI.txt CeTHKcOfliY.txt PU-k-2y9nl0.txt aIBc-ww3Wbc.txt nYW70EgtrFM.txt\
+-MRqXhUBKGk.txt Ch1akUQwqJA.txt PYJwugRyYZQ.txt aPebsWE_Sas.txt ndKgMZI9UKw.txt\
+-NmKSKC3VWc.txt CmWJEa2RoHE.txt PbL8NoErTj4.txt aQRZCazjEW4.txt ne2DZ8438lk.txt\
+-SOWMCW6-I8.txt CnUHDv-r1CU.txt PgHM8GwvGVQ.txt aXOZM2XB_ao.txt ngImYZyQcfQ.txt\
+-WP6Z4rK9LY.txt ColTyBIHgE8.txt Po9yLWl4jZ4.txt aYfelztLF4A.txt ngbBcpXT42A.txt\
+-_vft2vgPfs.txt CukOmDOErYQ.txt Ppqgw-tflKw.txt aa6-ukf-lPo.txt njgSCqFvzzE.txt\
+-l52-9si4j4.txt CwA0EGOTGYI.txt PtB_bxr37gg.txt ab_QrOjwXEo.txt nuOjkwS2kF0.txt\
+-qAQj7eoogY.txt D-yLrUyyxqc.txt PyF758CA6lc.txt aebcpIdY-dQ.txt o29YaBVOwcI.txt\
+-vkXniG_cJQ.txt D00ZoJtB6qY.txt PywZqvoYc9I.txt alCJcxA0H6Y.txt o2zY0RzSgA4.txt\
+-zDpKkCy4-A.txt D07gVndyh-0.txt Q2HahUkatKo.txt aobaawOtKwM.txt o9Kf5tyL5dE.txt\
+0AG4fnCkgsc.txt D1jJdYBgnpc.txt Q34nt_UBg1E.txt at3c6at9ljE.txt oALcPYDUltQ.txt\
+0CQHA3VJ67c.txt D2JI3gG3wZI.txt Q5luuQNLvhU.txt b16dnmlzujw.txt oB_X_Of2mdk.txt\
+0G3pjZGpF-Y.txt D4IT2bIM59E.txt Q5tGRmgfg-w.txt b4uqfZkDd1M.txt oEi0KXX7flc.txt\
+0HlrD6-lDnU.txt D4b6gFgZXWI.txt Q73tnD6QiBc.txt bA8OjP5mnIQ.txt oLLQthJLfyw.txt\
+0L3m8cCBNPY.txt D5WG4v-YESQ.txt QA2KDimBigE.txt bCFR2XMFooY.txt oOVJjgm7igM.txt\
+0Ove9dzOAG8.txt DC82lI5J9ak.txt QENN4OHoqYY.txt bEFu6s3wNFA.txt oReNnSgqxas.txt\
+0TQ-5PygpeQ.txt DGiaYRrlxMk.txt QEexHqZ0_NM.txt bJcuM1USL7I.txt oS-WiRSDLd8.txt\
+0XEdMmsEYRM.txt DHC4e7TagaM.txt QHGgopdoV8o.txt bKWrE2kvyxE.txt oUU7vG_RV_U.txt\
+0ZZG6RgrL0k.txt DXvTbg4MW-A.txt QJRppvemlH8.txt bMA6nyuo5D8.txt oZs0_saBmzc.txt\
+0aPEArCq-YQ.txt DYfH1aAtzUA.txt QRZUsNzJs0c.txt bRBjJpnoFxQ.txt ojHhZwXBO6Y.txt\
+0oDdHzyoR_0.txt D_sShpiGvNU.txt QZ33PB-rvYU.txt bZ0uRJoZpoY.txt ojXyzh6wgBk.txt\
+0pfhOFftNt4.txt DeWhXFPkhvw.txt QbVl6jOL6RQ.txt b_H8uWoUwr4.txt omJTRlu83S4.txt\
+0qbZjcIcM0A.txt DraQxEvNMiU.txt QcObAqA9eFA.txt b_kKUc4ppao.txt opc4pil8ygQ.txt\
+0ysDT9Q2UmY.txt DzD_n2FE_38.txt QcXxfqZ6a68.txt baQVgEFDrVw.txt ovHG5HxAHNI.txt\
+11UnRh9fQsc.txt E0OQBC94mYE.txt QdHPXssIFG0.txt bhJgrn_LkTw.txt p0ZK3CrtX7U.txt\
+16dDpu4EscI.txt E3L3Ph64NsM.txt QgC0q_9yUjI.txt blXu18I0F8A.txt p1mNkbOF-3A.txt\
+1LMcQj4i_QU.txt EBZAB1bEBxA.txt QgDbQW7YQuI.txt bvkx46BvDYI.txt p5IFfS0ozOk.txt\
+1PMFul4708U.txt EDmG6Afazo8.txt QiZu482WiI8.txt bxAEE8_ePDc.txt p8ZypKGKRqU.txt\
+1Pvotfk1kWE.txt ENkzjRhy-8U.txt Qj3HRRDbyfM.txt c0Ru0kpEdG8.txt pAoL-IHbRl4.txt\
+1RPaH6o-Pok.txt EVA6U-6MsBc.txt QlJ0el_kEk8.txt c4PPQ5kBFlg.txt pFlj3YMUQ7Q.txt\
+1RoiuzIT5Uw.txt ErgdULYO-Po.txt QpH7FkYbkNU.txt cLb5UQWycK8.txt pOKJTAL5xMc.txt\
+1aVFaYFpies.txt EvvUyNGt-3g.txt R1ZO6z8H_N0.txt cN4jeAw7kyY.txt pT3YGwi1OOY.txt\
+1e2RrVHzzDY.txt F-4K57EEdqM.txt R5SUrWPTSoE.txt cQDYionea18.txt pYWgzpTSXIA.txt\
+1mexcX-1eMo.txt F2rBopi8yr4.txt RAEA-W-k638.txt cUL7EdP1Qwo.txt p__WEGsrzvM.txt\
+1qb9RZsjPZY.txt F3k394vjyT4.txt RXFVOui_6y0.txt cYMVxFAVKjg.txt peybxMcYbgg.txt\
+1thfaMPRVrE.txt F9fMoCnfZ64.txt RYI8KjwB8yQ.txt cgTL7F2lMBc.txt pkI8Laks5ZU.txt\
+1yhQWIE-Egs.txt FEUwZz9FTsA.txt Rd3cJs7vnIo.txt crWx2pLykYA.txt pnv0MTPAr0o.txt\
+25cabpp6f5c.txt FHbPgfi7PFM.txt Re2D_n2pdgI.txt d1utPcTIMxw.txt po4KonZaJTA.txt\
+2LCC9HsaVtw.txt FW04cyGdzVo.txt RhMnA27aFUw.txt d9pmugcCVxI.txt pq7ppWWj1Ns.txt\
+2U4wrNeMFZE.txt FYG15BqSm2U.txt RhhOp2sCTrI.txt dGEddH0Cnrg.txt pq9sBQ1aGs4.txt\
+2duomwFs4uM.txt FlaAdzO88CM.txt RjvETVfEv3w.txt dO3YEkna060.txt prUufek6ST8.txt\
+2u7EA0ANFCM.txt FmNfMNW95kk.txt RsRMSnmGMYk.txt dZS9KHiOEwI.txt q1eHcEwoi9g.txt\
+33_Im--TDlQ.txt FoG9oix3rHQ.txt RueKfqOfqBs.txt dfu93oVTsvE.txt q2prIrrxWJg.txt\
+35h7VDEaby0.txt FpqRCKHeIco.txt S46LjWzTmew.txt dgupGDZNOzI.txt q2tqdYj7qL8.txt\
+3AgdYAQ_w-A.txt Ft2_pcdhVVc.txt S7LZTzRptIw.txt diBuzOltM-Y.txt q81vZSbLH44.txt\
+3DiHQ88bNCA.txt Fx3m7RTHKzc.txt SBWa0F8_e7o.txt dtfRXSnxccY.txt qAviXAeWZZg.txt\
+3OEfIuCoDBw.txt G4ovLhc8Ee0.txt STgWNOhxl9U.txt dwYj_kSnwIE.txt qC8sipBGDmo.txt\
+3Qs05ZMecik.txt GBZaJCG8v1A.txt SU5wKgL7Ao0.txt dy-AD4gKFRg.txt qF35mMq2DrM.txt\
+3aWLHf1IHeI.txt GC9yAxQB1XA.txt SZND1cKT3B0.txt e612oIK8aVQ.txt qR2UL0YTlBM.txt\
+3bweQDa5TXY.txt GHEiLLWmvzQ.txt SbOn1wrbK5Q.txt e7r64CI0dj8.txt qTfhCzQHvHw.txt\
+3fiatPLMQIY.txt GHw09uEaW1U.txt SbhNfVQeGP8.txt eE_CG8jvh_8.txt qZIOv_H3W38.txt\
+3mT-VCD1dbA.txt GHzU27vk5iY.txt ShfRue-H52M.txt eHfb9FgSZd8.txt q_TKneYGokQ.txt\
+3mhdQxxS7ws.txt GOglPxTBJw8.txt Skd_cIFD-JA.txt eLf4ZNWAJ_Y.txt qgBqVMKqIbw.txt\
+3porTRIQ-Cc.txt GQ37hVT1uBU.txt SqlBmOadZEc.txt eNl31dEyWa4.txt qhDhmzfRMG8.txt\
+3sd6VQ300T4.txt GQEW23vVfVw.txt SsNeisl1EOI.txt eQrT0jQVR8M.txt qiIgiIdFygw.txt\
+3xmpTaKp8cs.txt GQWKHEdXgoo.txt T4X3sIwZdvQ.txt eV8427raj4I.txt qlbb_HEBHK0.txt\
+400Irb9UXzg.txt GXkO7WRa318.txt T5VpEAnlFuA.txt eWA1jAxDibM.txt qmb645nnCMY.txt\
+40kWrqkKHFQ.txt G_UUcfPsZm8.txt TAuwW3l4veg.txt eWICC09G9c0.txt qptaHSHzMSA.txt\
+41O96MTR90w.txt Ga8m4ZZ9rVo.txt TJvz_welElY.txt eWYNBB2VkRc.txt qsln9mkJ1Go.txt\
+42WYsytjAGU.txt Ga_61PSyuRQ.txt TKnZ3osXPgs.txt ed2JyzmX4Ak.txt qwn6-vObOG0.txt\
+48o-EYdVaMI.txt GfDrjn4pX_0.txt TKovsmC4jrE.txt ejxriJIvX_M.txt r3FyORQ928U.txt\
+4CCAGmHfmf0.txt GgfCCg9sHtg.txt TRxQxnnspEE.txt ep8P10AbGUM.txt r5fZZE-p3ZM.txt\
+4DaW2liE31k.txt GkHxsYr8IBA.txt TSg3Dv6Jq3M.txt eqr2dyUsOBg.txt rCbjKD9kMuo.txt\
+4KbCL9gx0cQ.txt Gm-DPwQdM7E.txt TSiy6sTpXeU.txt evCa3mLIdB0.txt rENu2r3Gz10.txt\
+4LWbmp4eQsY.txt GmKN_LP0__g.txt TgPlqrV8x_c.txt f0eWdgrojqo.txt rEp5D0czGgc.txt\
+4O2KR3fxDVY.txt GnGo33t_tDw.txt Th_61ZpA5bs.txt f1Q5tR136w4.txt rN1UebF3E8w.txt\
+4Uofh0qz0ow.txt GsjQkTxeT1Q.txt Tj0YbTzoXUk.txt f4pGdV6fhU8.txt rRKjT34-9JM.txt\
+4YSdsGgVze0.txt H9XE7qauHsI.txt Tmp7hucT1kA.txt fE7BrDUVID8.txt rd4SV7cScP8.txt\
+4_qDjCbmqYM.txt HA2yBkp-mX8.txt Tq7fgqs48kE.txt fE_ibKu9tyM.txt rhT3Qfkw6qg.txt\
+4csL2IWSiBk.txt HHwpWDImPzs.txt TuK8xPXmNN8.txt fIiIKS8nIrk.txt rpVtwipDRao.txt\
+4gqA6OrWQe0.txt HJ3nQUrrxaE.txt TxO_puI-ZGg.txt fQO-B9bUjZQ.txt rvVGH187E6c.txt\
+4luHl6yioWQ.txt HVjOYA3F-ME.txt UA-cDwba-CQ.txt fYrbNtYRAR0.txt rwtqnjGuMv8.txt\
+4m0zT6d5sng.txt HXZTsBiozjg.txt UAQGfHo5Qrg.txt fbUeQWNC4N0.txt s-7P4qeHJrs.txt\
+4pX_COdbjZ0.txt HXoAqHG-ZDU.txt UG2bLWN8RRU.txt fe6CXeyUw10.txt sGK6XzFlB1c.txt\
+4s61ZTAUhJM.txt H_m9vBruyIw.txt UJGIc8ypxY8.txt fmrIOPFbg98.txt sGWjwxmp_SA.txt\
+4tNikoYATAk.txt HgtixiD4lpA.txt UJeFs4qHvVk.txt fnH29NBt-EA.txt sLIdm2t9DJM.txt\
+4vzMCApQzbI.txt HiTF5-ztEfY.txt UJsp67Gtp34.txt fzTvMsWpqko.txt sLavRFrP2X0.txt\
+4w26OMG4utc.txt HlxJyAqIswU.txt UMYjE1OTNws.txt g0QzRb5RcqQ.txt sOhFi1R6Dp4.txt\
+4xjmvN6Y46U.txt HuVaf4JtHbs.txt UMoa41BHsfc.txt gFQsTd91MyY.txt sWzaPmHYpnY.txt\
+531nQn8f11g.txt HvfjdnFn-80.txt UTPM-jzQqCA.txt gGN7z4_kCoU.txt sXc8gkzxTUQ.txt\
+58F574x-LcU.txt I1MSxqOQhgo.txt U_XiBQp7lV0.txt gHQRPpJLLXU.txt sXuwbMAjeQw.txt\
+5C_LgCPs32Q.txt I4HJu_49DZo.txt Ud-uzFB7ldI.txt gJox72Tm6Us.txt seJLoJW9ql8.txt\
+5O8RJSDz98k.txt I9ankjAhsWo.txt UhGlGMAJC5c.txt gOK4X4_SvD0.txt shrpRu8j5G0.txt\
+5RFr_Cltr_U.txt IABt9F00SNo.txt UkjFrnyWuAU.txt gOuXe9Xww4E.txt slqWmD_HPDQ.txt\
+5YFX4kD2yPc.txt IEzAsfHLcdc.txt UlEUFR6kKiU.txt gP7jWe_XIYM.txt snZ-UU515kY.txt\
+5aTgFpyCxNI.txt IJ3GY0sbA8c.txt UqVx05n7ToU.txt gQUPxwMGIIc.txt swuXgRUyMQA.txt\
+5eIdnve192M.txt IL6zN-4-bEg.txt Ut2s2WsCQOE.txt gSl1sxH8sRI.txt t4-ON9O4e7g.txt\
+5p-ziB1VFeA.txt IQ_RTbgr6xc.txt Uu1kONTu7J8.txt gXUwnJD51_k.txt t5GDHDZPjk4.txt\
+5sWkUiHhCuc.txt IR2OsjZ0ODA.txt V0BrK4bftQ4.txt gaMB4n32Wt8.txt tR_kN3woF_M.txt\
+5uPJ-z2QoN4.txt IUZmT-sl6hE.txt V4yTcL0OFMU.txt gcJEQ_4ocPk.txt tVj3b9H2HNk.txt\
+5zQyAsNX2cw.txt IcH1WUDkO2I.txt V9kWTJ2wNm8.txt geAlmmN8yoA.txt tWGGUujckNY.txt\
+6-t2yu6lKUo.txt IgizWv2Pxl4.txt VCV2OiCswec.txt gexlfX8xkN8.txt tWiWGQlPmrA.txt\
+65CZE1rP6Eg.txt IhQQVXw7a-0.txt VF0Jx4m0qfI.txt gk0w-FE_41U.txt tZWZKIhkeG0.txt\
+669Pv7kyyIM.txt IkdyF8cl7mA.txt VGyVdKBDJRA.txt gmLKjQZan78.txt tZZap65TAG0.txt\
+6OKlhIq6GOw.txt IpUZPISGg7s.txt VHVIXyTa9sU.txt go_2nr4lMFY.txt tdyEmorVoog.txt\
+6RCJYnjkslo.txt IpYcEiEw5sg.txt VVJ8Cik3QH0.txt gwY4V4SitN0.txt tjGmoIC_i5I.txt\
+6V6tuIL8Zb4.txt IqxyFfxcZi0.txt VesyOZ2U1IE.txt gwr_ORD_rLA.txt tjPKVyrAd4Y.txt\
+6VOihLhQv0Y.txt J-JZS3M0H7s.txt Viwl69CK1PM.txt gzMvthu63h8.txt tk6ajHaRXio.txt\
+6ZEcQ_LB3VY.txt J1GDKEsXPq4.txt VoJtBeiVTEY.txt h0--p5xiQ5M.txt tr9b7gEzgnY.txt\
+6hW7-7IEM3w.txt J2DTha6Aoek.txt Vo_Xmd28_bg.txt h3ferEARqrE.txt u0PZ5rW2Zj4.txt\
+6hWy73HZLAU.txt J8fxjby-YV0.txt VpQUb-tIBck.txt h4ibQhCUoyY.txt u1K_X8CIGz0.txt\
+6hf0tbjnmVU.txt JMprFSjV9Us.txt Vqm04uGkIhw.txt h68xuvZ7ID0.txt u54OYxxsFnM.txt\
+6kEkPnAgJJI.txt JPDTLZa7O0Y.txt VquXFiHVFcg.txt h9ITXfDFWx4.txt uAsTDp1zO5Q.txt\
+6vAwCMRS1jM.txt JS0xgBV6MXk.txt VtN4ofQzvaw.txt h9iP_ZY_EeY.txt uMmV99jXeg0.txt\
+7-ARLX72Pf8.txt JS45RqQ7PIo.txt VtnzAl_G2Zs.txt h9wMOPwBGFs.txt uPJmiGx5tco.txt\
+71C43wK-fLA.txt JWnEOtswjuM.txt VxGPRSr---w.txt hH53cfIJpjc.txt uPe4xEcUp_Q.txt\
+71Ifu5-VDjk.txt JddEK9WAl8Y.txt WD77ZxxOdo8.txt hIM1495mul8.txt uQFHh50DVxg.txt\
+74-5JprLfYE.txt JkJojxXRoQc.txt WIMUtUBhF_Y.txt hRD5m5NeyHg.txt uTWm63pUxFg.txt\
+7A6neI-Pt44.txt JqQ06ALOPDU.txt WM4aBSwlZ0E.txt hVBvygQxcj8.txt uUJsePlZIcA.txt\
+7BGKEA4ujIA.txt Js3yX1VXYBk.txt WPrn9X71nwc.txt hWKlRDrSPMo.txt uXiqR1VVAnA.txt\
+7Bhli4QV-bU.txt JxJ5Q4QyRtg.txt WUmfzHMwQDU.txt hdIKR5nQ9yY.txt uaQ5Z4U_RLk.txt\
+7Cg2YSFuhqc.txt Jxc_5A9IgVM.txt WfGwYlpvSoI.txt hfQk169rNsk.txt ufM2jO9kdAM.txt\
+7D8xsuP1yaA.txt Jz9yRrq3uUI.txt Wita5MqKKQs.txt hg4v3cyEuOQ.txt uhkcHVlwM_k.txt\
+7E2Rda2Ueks.txt JzfMLiFn6w8.txt WltCQfMPYpE.txt hi_yKCm_vaU.txt ut5mXwegcJc.txt\
+7IHi2n4BbAI.txt KCyQJ2PjOK4.txt Ws83Z3xOGKQ.txt hmFeuD8xHvA.txt v5a2GTyYtU8.txt\
+7PJR9noso1c.txt KZqwjN2l2sc.txt WtbJe5BGEUU.txt hmslijtpYKc.txt v6EdZiXFez0.txt\
+7SpIg2ZtEPg.txt KbosFN7imJ4.txt WwSb7yUzxMU.txt hqdzQoDcF6k.txt vBJhVo42mmQ.txt\
+7aMEsjvc7xU.txt KcPBCaOjOqM.txt Wweas8KRKm8.txt hqjjiy7a9O0.txt vL8Pyxrj0v4.txt\
+7ju_5Ihwe8w.txt Kjy56JVI10U.txt WzjKPkVHTvA.txt huu6FVy66fI.txt vMQ168xWX_o.txt\
+7oAPZmiKs14.txt KsvCiFGMChs.txt XF9YRK2JVfc.txt hxzHCc_uWH8.txt vMZzjAMIoPo.txt\
+7qERzBhPs8I.txt Kuih9X0ghM8.txt XIWO7xEad-I.txt i5ReW32q3Ko.txt vRLchnyTGn4.txt\
+7uMx7rmk3Z0.txt KwemIQ1fOj0.txt XInML9EFaiw.txt i77oiR6VopM.txt vSLlpFAMVwc.txt\
+80Hk2czcmz0.txt KwfVK4eJkQ4.txt XPjxgRv_5o8.txt iU_fDGtFh1g.txt vTtI6wQA5C4.txt\
+84aob9elIn4.txt L-rUVmferEw.txt XV-qYV1pp1A.txt iVmu0PbpmZo.txt vV3wRnd6vYE.txt\
+88mf4nqtgmY.txt L3jHrekiApE.txt X_C2H5J6fHg.txt iYJBCHoJVAA.txt vZWC1lLs-XQ.txt\
+8BeJuCPzuiM.txt LAu4gbRHeAc.txt Xf_62Z68gEY.txt iikvqKZF9Gw.txt v_2__U37si4.txt\
+8E96bEhJNVg.txt LFT6LRcOT6M.txt Xfk4CbvHly0.txt io1S4PMKtNU.txt vedw2pDMl1I.txt\
+8HisdRU5ugs.txt LI6xa7h0iuE.txt XgKwEseJewA.txt ipUBBrR65F8.txt vjeEbFEcdeU.txt\
+8RFbXWJMMdU.txt LPu7JoLTUkU.txt XhM934W5aGM.txt is1GusJiw-E.txt vl2m2Eda1iQ.txt\
+8U_9lhsm-L0.txt La0Th7qi2j0.txt XlSx_JQ0Its.txt j23B3aSkjwY.txt vmBH6K1s2as.txt\
+8WZNIe6Z5WI.txt LaONAh9HKaM.txt XnEUvamIsSw.txt j3lIb4dZj4Y.txt vpxs-eWuIh0.txt\
+8Z60zPcDTpU.txt LeTdlkXLocs.txt XqHbmwbzo3s.txt jCuoNhHuzLw.txt vwB8MDhHjVE.txt\
+8_BfpdpzLhU.txt LfgonN2ILck.txt XsR4XRdkJe8.txt jF4yfdU7vZg.txt w0-WXaMwI-A.txt\
+8b2vLAvx9Bo.txt LnQWQudcwqc.txt XwHz0Hls2TY.txt jHSUFr2zzR0.txt w04geIHxXNw.txt\
+8cAjsRGUc94.txt LswGLDD_sVY.txt XxleRYL0lQg.txt jJTe-MzLpCE.txt w7N9xscekW0.txt\
+8gp7OM98Las.txt LuTZX4CHQ9w.txt XzNkbX76Nl8.txt jKvw8aHfkDo.txt wE8C74gcebg.txt\
+8nTqdgTwzvM.txt LvQHWjDnbe0.txt Y-OqBo9wEKU.txt jPWxXP_97h0.txt wHfBUCTeya8.txt\
+8oJKeKOdZVs.txt M1cZXP7lEtU.txt Y1HHvxd-i_o.txt jTsCW8YW8KU.txt wJY8L9pnMHQ.txt\
+90VVxJiIELI.txt M5WVoTTFzNI.txt Y21PIucoKGA.txt jU4EuKItKXk.txt wJryqxjzNd0.txt\
+92mhdJ8TqxM.txt M89f8e4uHR4.txt Y3XzspF2-j0.txt jXRtQwylcWE.txt wOAbwJxMIFY.txt\
+94Mxu303MSE.txt MBhF1SqPON0.txt Y5h1WKcQE-Y.txt jYYprDoVIBY.txt wWs_ZF7Vte0.txt\
+97_DgYfy9GQ.txt MIkp1V1RO6U.txt YNCVr0rcRu4.txt jh4Yw_wZ-L4.txt wYrqk01iu-E.txt\
+9DXp2BCvfic.txt MIuRww1tyfs.txt YNNH7gPs59o.txt jhjzYcUznKw.txt wcual_GfILo.txt\
+9DeTdcIXUEQ.txt MM-E3u6BIgg.txt YNlUf2ii_3A.txt ji0eDNWToHE.txt whgNLMjL84o.txt\
+9Gs_25Lhp8Q.txt MSbp_MG204c.txt YQDWGXv3JkE.txt jljLNxKfNOI.txt wom_dteqKNw.txt\
+9QDlLZ5tWu0.txt MXeJG0TByYk.txt YTD2qKo1B9c.txt k7JAMRcwJYE.txt wue1NB3UBoc.txt\
+9R-eZe201z8.txt MncLBEefeeI.txt Ya5N62-TMlw.txt k7bQm0E0RdE.txt x1bTYix7LBY.txt\
+9Y37wY1T21g.txt Mpcq_JN6JR8.txt YaAeJyPldvA.txt k7gFmcmgpLg.txt x2EUaZPiFn4.txt\
+9_C5tlethh4.txt MrCR47McYFA.txt Yac_wBOLaE0.txt k9OXFFQB3Q0.txt x95ml6TQatU.txt\
+9n_ExO7jiqg.txt Mx0fSPFt02A.txt YbSTpi0VF0w.txt k9YB44ticXA.txt x9VQXzdTCls.txt\
+9r83G35NzcA.txt MydyNGZoVtY.txt Ye1VifhbKQk.txt kCtNZvMkYDc.txt x9nOeWthksg.txt\
+9tp8_4RWo1M.txt NGfyRYJA4OQ.txt YeweYcdCUDI.txt kF98eVqBSnk.txt x9p1ejiJWo8.txt\
+9vmCeLY4vQM.txt NK69CbQxrdw.txt YfxFVwmGGhg.txt kGw_QYAsIuA.txt xEcstTxRdYU.txt\
+A1HzTECPO2c.txt NKbpI3JkBIA.txt YlGoBluDL30.txt kO6iCkwACKs.txt xReQip63ds0.txt\
+A9DXyfRtt_Y.txt NQuMMyWDAd8.txt Yn06BI6ENLE.txt kOHVICAZZs4.txt xS0p3RRRwq0.txt\
+AADU0yeh7kw.txt NVVoWrA-FAI.txt YoCDTFIPX2Q.txt kUgMSEluf9g.txt xTZ0bYSa_vU.txt\
+AG6-tcUTWLY.txt NfDv4NP8mnE.txt YtGdu548gIY.txt kV9PBC79J8w.txt xawqk4IfHpM.txt\
+AGWjXGnfkfs.txt Ni4_qeN4pI0.txt Z29e68eRwFw.txt kfA8Y69I22s.txt xbRCA0RBRu4.txt\
+AH5JNAzt2WI.txt NifAUotLqMA.txt Z9nWV1JMp3I.txt ktho26ybkIs.txt xc4bycpbPZg.txt\
+AHeqnQ_6yP0.txt Npd30A2wdTk.txt ZLXNLb5t5QA.txt kxXXZg-TOas.txt xd56bHTeFHk.txt\
+AMvJM3Qx-qo.txt NqAZblnH4eo.txt ZPXkoyj4W9k.txt l0EjfTJT5-Q.txt xhKPpjhgsRA.txt\
+AVKzWLvcNVA.txt NsChp586ajA.txt ZVKvi-26Ixw.txt l1FklTI7C-8.txt xuCY6_-UaCg.txt\
+AX9Wnw7yyWg.txt NtpzqE2Qy-M.txt ZcPlD8CXh7g.txt l9464cRkeSY.txt yR9L0-PQqI8.txt\
+AhEOKPEv8bE.txt NuI8CnQX0uo.txt Ze6IcfRsSjE.txt lBnEzl-sp6s.txt ygAJF_j9e04.txt\
+AhdWs-2if7Y.txt Ny63P3OLYic.txt ZjcuZLQr7ak.txt lHp2zWY7ryE.txt yqMhB86v3ko.txt\
+AmPpjM9MjBg.txt O2NJQsZ_BDE.txt ZpAdHuguQkk.txt lK1P4KJbooU.txt yrK93DOAf5o.txt\
+AsdVhHqgY5w.txt OG1VO_9dLIs.txt ZuUP38rc3jo.txt lM9bBKLIsL0.txt ysi1fZScG2M.txt\
+Av1AKdM746I.txt OIzrHRVk10A.txt _-Oz_dMDLg8.txt lVUdnBJV0yw.txt z3Zsf4EWNgs.txt\
+B56lPP6aYdI.txt OLsHWvVz5gw.txt _0QGiq8nkTQ.txt lYfSum4mR8s.txt z3x9N-6tWEM.txt\
+BAc1CWqgPT8.txt OOcS1nkFYvA.txt _27FOVlLSpo.txt ldhWBW2lVk8.txt zE3_WMGbY58.txt\
+BBW0dO4PnRA.txt OZYK-hJlcTc.txt _6EdT1BzAVY.txt lqLn4JKzZ9I.txt zSpLNKdtmuc.txt\
+BFFAsqJRnU4.txt OaK9ST7gvXc.txt _6ZOUMe0lsM.txt lqkiAFF3oL0.txt zTDt2y7IHDE.txt\
+BLVOjwkjuUY.txt OdZfT4C-FKg.txt _94Jd36ToYQ.txt ltjVCAtv1xs.txt zUdcltUEOLU.txt\
+BNHZGQDE0Rs.txt OdeVMUVkKMs.txt _9M6Irc_Y6o.txt m74yKJqDMAs.txt zXbW80G66Kg.txt\
+BWufLSRX9UU.txt OifRldYZQy4.txt _AL1_xHSAlw.txt mCd9-PiHLQA.txt zZJMIsCRwLs.txt\
+B_ZSvC0Ilr8.txt OrHeJvGMb9o.txt _AwM0VOO_tY.txt mYNtsiQTW2M.txt zp4kcBj2Mk0.txt\
+BfYv9jm5iKI.txt P-prwTMrfrI.txt _HqkI8FCvaE.txt ma2NXC71Ht0.txt zr_JbkV2DJ4.txt\
+BhNOyZ1xCBk.txt P1kgt5CfCOk.txt _QnVw38EQbg.txt mepx5dDjMt0.txt zsAJzGUfBrM.txt\
+BmzZyqahNH4.txt P2cN11_oStw.txt _TPFG1UNnF0.txt metwmpbGcq0.txt zvZzx9-J2qg.txt\
+Bqua5lXenlI.txt P3ZBW0U8NdM.txt _UAtT_aGXtE.txt mfatPcHmwt4.txt zwgJT718esA.txt\
+BsWkeQV3S7s.txt P8XuZ3FZyIo.txt __WrTKexw48.txt mfeR2WX_IMM.txt\
+BwtnpU4uzuI.txt P8_6eHLhEP8.txt _f0vk151G2E.txt n2LN5k6MJuY.txt\
+}

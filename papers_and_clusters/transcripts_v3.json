@@ -1,0 +1,20 @@
+[
+  {
+    "video_id": "B4HPUbJPbYE",
+    "status": "error",
+    "error": "Cannot connect to host www.youtube.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')]",
+    "method": "api"
+  },
+  {
+    "video_id": "8ch8_AX-7ZU",
+    "status": "error",
+    "error": "Cannot connect to host www.youtube.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')]",
+    "method": "api"
+  },
+  {
+    "video_id": "ZPr-uZMwQY4",
+    "status": "error",
+    "error": "Cannot connect to host www.youtube.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')]",
+    "method": "api"
+  }
+]
