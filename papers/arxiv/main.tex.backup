@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\title{Structural Stratification of International Yoga Day Discourse on YouTube}
+
+\author{IDY Computational Corpus Project}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+
+This paper analyzes YouTube transcripts from International Yoga Day using:
+DSI, regression models, mixed-effects models, and temporal analysis.
+
+\input{results.tex}
+
+\section{Cluster Structure}
+
+\includegraphics[width=\linewidth]{figures/dsi_cluster_distribution.png}
+
+\section{Year Effects}
+
+\includegraphics[width=\linewidth]{figures/year_effects.png}
+
+\section{Interaction Model}
+
+\includegraphics[width=\linewidth]{figures/mixed_effects.png}
+
+\section{Additional Structure}
+
+\includegraphics[width=\linewidth]{figures/heatmap.png}
+
+\includegraphics[width=\linewidth]{figures/effect_sizes.png}
+
+\section{Conclusion}
+
+We find statistically significant structural variation across clusters and time.
+
+\end{document}
