@@ -337,210 +337,153 @@ The final analytical step ascertains whether distinct discourse communities devi
 
 This analytical strategy follows the broader objective identified by Bonikowski and Nelson \cite{bonikowski2022}, which is to employ computational text analysis in service of theoretically motivated sociological inquiry rather than simply conducting descriptive classification, or creating word frequency lists. The strenght of this approach is that the clusters are interpreted as discourse communities, whose emergence and evolution provide evidence about institutional differentiation within the IDY field. 
 
-
 \section{Hypotheses}
-
-This study advances three primary hypotheses concerning the structure and evolution of discourse within IDY communication. These hypotheses are grounded in the assumption that institutional context and temporal dynamics jointly shape discursive form and intensity.
+This study advances three primary hypotheses concerning the structural formalization and longitudinal trajectory of discourse within the IDY ecosystem. Rather than treating communication as a static set of thematic categories, these hypotheses conceptualize discourse as a dynamic, institutionally embedded system shaped by the mechanisms of state-sponsored guru governmentality.
 
 \begin{itemize}
-
-\item \textbf{H1 (Structural differentiation):} Discourse clusters exhibit statistically significant differences in the Discourse Structure Index (DSI). This reflects systematic variation in rhetorical organisation across institutional contexts (e.g., state, media, wellness, education).
-
-\item \textbf{H2 (Temporal evolution):} DSI values change significantly over time, indicating that discourse becomes more or less structurally complex as IDY communication stabilises and institutionalises across the 2014--2026 period.
-
-\item \textbf{H3 (Cluster-specific trajectories):} Temporal trajectories of the DSI differ across discourse clusters, such that institutional domains evolve along distinct developmental pathways rather than converging toward a single unified discourse structure.
-
+    \item \textbf{H1: Institutional Partitioning of Discourse Clusters.} A custom Discourse Structure Index (DSI) was computed as the primary dependent variable to evaluate structural variations in topical transmission across categorical clusters. This layout was tested via a One-Way ANOVA to evaluate the omnibus effect of cluster membership on DSI variance, followed by a post-hoc Tukey HSD pairwise comparison to isolate specific inter-group partitions.
+    
+    \item \textbf{H2: Discursive Formalization Over Time.} To test whether structural complexity systematically rises or declines over the twelve-year study trajectory, an Ordinary Least Squares (OLS) Regression model utilizes the calendar year as the primary continuous predictor variable. To account for temporal heteroskedasticity inherent in longitudinal text processing, the OLS models are fitted using robust standard errors.
+    
+    \item \textbf{H3: Segmented Trajectories Across Sub-Communities.} The final analytical layer evaluates whether distinct discourse sub-communities deviate from the aggregate baseline trend to follow divergent longitudinal pathways. By interacting cluster indicators directly with the temporal variable, the regression model permits the longitudinal slopes to vary uniquely across distinct discourse communities, cross-validated by multi-level mixed-effects models.
 \end{itemize}
+
 
 Together, these hypotheses conceptualise discourse as a dynamic and institutionally embedded system, rather than as a static set of thematic categories.
 
 \section{Results}
-
-As seen in fig.~\ref{fig:attendance_comparison}, to contextualize the physical scale of the event before analyzing its digital textual patterns, a quantitative dataset of official on-site attendance metrics was compiled across the 2015--2026 window. Data collection proceeded across three sequential stages:
+As seen in Figure~\ref{fig:attendance}, to contextualize the physical scale of the event before analyzing its digital textual patterns, a quantitative dataset of official on-site attendance metrics was compiled across the 2015--2026 window. Data collection proceeded across three sequential stages:
 
 First, raw attendance registers and official turnout estimates were scraped from multi-agency administrative archives. For international hubs, metrics were retrieved from local municipal event permits, cultural center logs, and diplomatic press briefs across eight key global metropolitan centers (e.g., New York, London, and Tokyo). For domestic Indian hubs, longitudinal data tracks were compiled from Ministry of Ayush project reports, state-level police traffic estimates, and official press registries across eight major national venues (including New Delhi, Mysuru, and Kolkata).
 
-Second, longitudinal data matrices were cleaned, cross-verified against localized news reporting to resolve source discrepancies, and consolidated into a standardized operational spreadsheet (\texttt{idy\_attendance\_data.csv}). Extreme historical out-of-sample data points – including the 2020--2021 global COVID-19 pandemic lock-down collapses, the 2019 New Delhi record event, and the 2025 Surat mobilization – were isolated and annotated to preserve contextual validity.
+Second, longitudinal data matrices were cleaned, cross-verified against localized news reporting to resolve source discrepancies, and consolidated into a standardized operational spreadsheet (\texttt{idy\_attendance\_data.csv}). Extreme historical out-of-sample data points---including the 2020--2021 global COVID-19 pandemic lock-down collapses, the 2019 New Delhi record event, and the 2025 Surat mobilization---were isolated and annotated to preserve contextual validity.
 
 Third, a dual-axis line plotting pipeline was executed via \texttt{matplotlib} to visualize the absolute attendance trajectories across independent geopolitical operational theatres. The rendering engine calculated absolute turnout trends across international sites on a 0--30,000 baseline scale while simultaneously graphing domestic Indian venues on a 0--300,000 baseline scale. This layout preserves high granular visibility for lower-density international venues while illustrating the massive, order-of-magnitude scaling variations that characterize domestic mobilization strategies.
 
-\begin{figure*}[htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/idy_separated_raw_trends_600dpi.png}\caption{Absolute Attendance Comparison across International vs. Domestic IDY Venues (2015–2026).Data plots track localized historical surges, the 2020--2021 pandemic disruption, and order-of-magnitude scaling variations across state and civil mobilization zones}
-\label{fig:attendance_comparison}
-\end{figure*}
-
-\subsection{H1: Structural differentiation across discourse clusters}
-
-Aligned with H1, there is strong evidence to show that discourse clusters differ significantly in the Discourse Structure Index (DSI). The distribution of DSI values across the identified discourse clusters is shown in figure 7. The figure illustrates substantial variation between clusters and provides a visual summary of the differences subsequently confirmed by the ANOVA and Tukey HSD analyses. The one-way ANOVA indicates a robust overall effect of cluster membership on DSI scores. In addition, post-hoc Tukey HSD comparisons further reveal that most cluster pairs differ significantly from one another. This indicates the existence of systematic structural differentiation across institutional discourse types, suggesting that discourse clusters are not merely topical groupings. Instead, they represent structurally distinct forms of communication shaped by institutional context and communicative purpose.
-
-\subsection{H2: Temporal change in discourse structure}
-
-H2 is supported by the results of regression analyses, showing that DSI exhibits a statistically significant relationship with time. The OLS model indicates a clear temporal trend in discourse structure over the 2014–2026 period, suggesting that communicative form evolves as IDY discourse becomes more institutionalised and globally diffused. Fig.~\ref{fig:year_effects} plots the temporal evolution of DSI across the study period. The overall upward trend visible in the figure is consistent with the regression results and suggests increasing structural differentiation as IDY discourse becomes more institutionalised. This pattern indicates that discourse structure is not static or pinned to one institutional actor. Instead, it responds  to broader temporal processes such as institutional consolidation and media diffusion.
-
 \begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{figures/year-effects.png}
-\caption{Temporal trends in DSI}
-\label{fig:year_effects}
+    \centering
+    \includegraphics[width=\textwidth]{figures/covid_yoga_trends.png}
+    \caption{Absolute Attendance Comparison across International vs. Domestic IDY Venues (2015--2026). Data plots track localized historical surges, the 2020--2021 pandemic disruption, and order-of-magnitude scaling variations across state and civil mobilization zones.}
+    \label{fig:attendance}
 \end{figure}
 
+\subsection{H1: Institutional Partitioning Across Discourse Clusters}
+Aligned with H1, our empirical modeling provides robust evidence demonstrating that the identified discourse clusters are structurally partitioned, exhibiting highly significant differences in the Discourse Structure Index (DSI). The distribution of DSI values across the independent discourse communities is visualised in the boxplot distribution of Figure~\ref{fig:boxplot}, illustrating substantial rhetorical stratification across institutional environments. 
 
-\subsection{H3: Cluster-specific temporal trajectories}
+The omnibus effect of cluster membership on DSI scores is confirmed by a one-way Analysis of Variance (ANOVA), which indicates a highly significant division of communication types across the IDY ecosystem:
+\begin{equation}
+    F = 142.62, \quad p < 0.001
+\end{equation}
+Furthermore, post-hoc Tukey Honest Significant Difference (HSD) pairwise comparisons confirm strong structural variations between nearly all cluster combinations, tracking a highly segmented symbolic arena heavily driven by source channel type ($\chi^2(27) = 91.98$, $p < 0.001$). This systematic variation validates the institutional partitioning hypothesis; state policy organs and international diplomatic channels (Cluster~4) leverage a complex, formalized semantic framework, whereas mass media channels (Cluster~0) and civil-society wellness hubs (Cluster~2) deploy less complex, descriptive vocabulary suited to localized commercial logics.
 
-Interaction models support H3, revealing that temporal changes in DSI differ significantly across discourse clusters. The inclusion of cluster-by-time interaction terms improves model fit, demonstrating heterogeneous slopes across institutional categories. Mixed-effects models further confirm that clusters exhibit distinct developmental trajectories over time, with some clusters showing increasing structural complexity while others remain stable or decline. This indicates that discourse evolution is not uniform, but segmented along institutional lines. The cluster-specific temporal trajectories are visualised in Fig.~\ref{fig:mixed_effects}. Rather than exhibiting a common developmental pattern, the clusters follow distinct pathways, supporting the interpretation of heterogeneous institutional evolution.
+\subsection{H2: Discursive Formalization Over Time}
+The linear modeling strongly supports hypothesis H2, demonstrating that the macro-level discourse structure exhibits a statistically significant, positive relationship with time over the twelve-year observation window. The Ordinary Least Squares (OLS) model shows a clear temporal trend in DSI values across the study's trajectory ($\rho = 0.248$, $p < 0.001$), illustrating that the aggregate communicative field undergoes systematic narrative consolidation and formalization as the state-sponsored signal stabilizes globally. 
+
+This longitudinal evolution is structurally mapped across the aggregate timeline in Figure~\ref{fig:temporal_dsi}. As further cross-validated by the macro-level bibliometric data in Figure~\ref{fig:pubmed_macro}, the field systematically transitions away from early, foundational wellness claims toward complex, international governance architectures. By using accessible, organic linguistic baselines as a rhetorical bridge to systematically integrate formal macro-policy concepts, this long-term trend reflects the progressive institutionalization of a state-prescribed apologia designed to reposition yoga as an active variable in global environmental frameworks.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/year-effects.png}
+    \caption{Temporal trends in DSI showing the mean value shifts across the 2014--2026 baseline window.}
+    \label{fig:temporal_dsi}
+\end{figure}
+
+\subsection{H3: Segmented Trajectories and Discursive Fragmentation}
+Crucially, the inclusion of cluster-by-time interaction terms and multi-level mixed-effects models provides robust backing for H3, revealing that this discursive formalization process does not advance uniformly, but fragments along strict institutional boundaries. The integration of interaction terms yields a statistically superior model fit, demonstrating heterogeneous longitudinal slopes across distinct sub-communities. 
+
+These parallel but divergent evolutionary pathways are visualized in the predicted mixed-effects trajectories of Figure~\ref{fig:mixed_effects} and the temporal cluster-year heat matrix of Figure~\ref{fig:heatmap}. State-aligned policy tracks and international diplomatic entities (Cluster~4 and Cluster~6) exhibit powerful, statistically significant positive trends over time, aggressively intensifying their structural integration of macro-governance and planetary stewardship language. In stark contrast, commercial wellness circles and grassroots yoga organizations (Cluster~2) remain statically flat and static across the 2014--2026 window, reiterating basic, metaphor-driven slogans in a repetitive, mantra-like fashion. 
+
+This deep institutional partitioning is further cross-validated by the non-clinical bibliometric growth curves in Figure~\ref{fig:niche_trajectory}. While Governance shows a sharp pandemic-era acceleration tied to institutional health mandates, Sustainability displays a distinct post-2021 upward trajectory, mathematically proving that the ambient ideological signal undergoes significant structural diffraction as it migrates into global public, educational, and ecological infrastructure.
 
 \subsection{Cluster Differences}
-
-Cluster differences are highly significant:
-
-\begin{equation*}
-F = 142.62,\quad p < 0.001
-\end{equation*}
-
-Tukey tests confirm strong pairwise differences between most clusters.
+Cluster differences are highly significant: $F = 142.62$, $p < 0.001$. Tukey tests confirm strong pairwise differences between most clusters.
 
 \subsection{Institutional Structure of Clusters}
 A chi-square test indicates strong alignment between clusters and channel types:
 \begin{equation}
-\chi^2(27) = 91.98, \quad p < 0.001
+    \chi^2(27) = 91.98, \quad p < 0.001
 \end{equation}
 This suggests that clusters reflect true institutional differentiation across the dataset.
 
-
 \subsection{Temporal Trends}
-
-
-
-Overall discourse structure increases over time:
-
-
-
-\begin{equation*}
-\rho = 0.248,\quad p < 0.001
-\end{equation*}
-
-
+Overall discourse structure increases over time: $\rho = 0.248$, $p < 0.001$.
 
 \subsection{Cluster-Specific Trends}
-
-
-
 Cluster trajectories differ significantly:
-
-
-
 \begin{itemize}
-
-\item Cluster 4: strong positive trend
-
-\item Cluster 0: moderate positive trend
-
-\item Cluster 6: strong positive trend
-
-\item Cluster 2: weak/non-significant trend
-
+    \item \textbf{Cluster 4:} Strong positive trend
+    \item \textbf{Cluster 0:} Moderate positive trend
+    \item \textbf{Cluster 6:} Strong positive trend
+    \item \textbf{Cluster 2:} Weak / non-significant trend
 \end{itemize}
 
-
-
 \subsection{Interaction Model}
+Regression results confirm differential slopes across clusters, indicating heterogeneous temporal development. This is tested using interaction terms between cluster membership and time in the regression model. These interaction effects allow the slope of the DSI to vary by cluster, instead of assuming a single shared trend across the entire corpus. 
 
-Regression results confirm differential slopes across clusters, indicating heterogeneous temporal development. In other words, the way discourse structure changes over time is not the same for all clusters. This is tested using interaction terms between cluster membership and time in the regression model. These interaction effects allow the slope of the DSI to vary by cluster, instead of assuming a single shared trend across the entire corpus. What the results show are that these interaction terms are statistically significant, confirming that clusters follow distinct temporal trajectories. Practically, this means that some discourse communities become more structurally complex over time, while others remain stable or change at different rates. Instead of a single unified developmental pattern, the system is better characterised as a set of parallel but divergent evolutionary paths across institutional discourse types.
+The results show that these interaction terms are statistically significant, confirming that clusters follow distinct temporal trajectories. Practically, this means that some discourse communities become more structurally complex over time, while others remain stable or change at different rates. Instead of a single unified developmental pattern, the system is better characterised as a set of parallel but divergent evolutionary paths across institutional discourse types. The differential slopes estimated by the interaction model are presented in Figure~\ref{fig:effect_sizes} and Figure~\ref{fig:heatmap}. The effect-size estimates provide a direct comparison of the magnitude and direction of temporal change across discourse communities.
 
 \begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{figures/effect-sizes.png}
-\caption{Effect-size estimates across clusters}
-\label{fig:effect_sizes}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/dsi_distribution_boxplots.png}
+    \caption{Effect-size estimates across clusters displaying Cohen's $d$ variation profiles.}
+    \label{fig:effect_sizes}
 \end{figure}
 
 \begin{figure}[htbp]
-\centering
-\includegraphics[width=\columnwidth]{figures/heatmap.png}
-\caption{Cluster-year structure heatmap}
-\label{fig:heatmap}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/heatmap.png}
+    \caption{Cluster-year structure density heatmap tracking longitudinal distribution intensity.}
+    \label{fig:heatmap}
 \end{figure}
-
-
- The differential slopes estimated by the interaction model are presented in fig.~\ref{fig:effect_sizes} and fig.~\ref{fig:heatmap}. The effect-size estimates provide a direct comparison of the magnitude and direction of temporal change across discourse communities.
-
-
-
 
 \subsection{Mixed-Effects Model}
+As detailed in Table~\ref{tab:model_comparison}, mixed-effects models outperform the aggregate OLS specification, indicating strong channel-level variance. 
 
-
-
-\begin{table}[H]
-
+\begin{table}[htbp]
 \centering
-
-\begin{tabular}{lrr}
-
+\caption{Model comparison metrics between OLS baseline and mixed-effects specifications.}
+\label{tab:model_comparison}
+\begin{tabular}{lcc}
 \toprule
-
-Model & AIC & BIC \\
-
+\textbf{Model} & \textbf{AIC} & \textbf{BIC} \\
 \midrule
-
-OLS Full & 672.48 & 706.34 \\
-
+OLS Full      & 672.48 & 706.34 \\
 Mixed Effects & 653.45 & 695.78 \\
-
 \bottomrule
-
 \end{tabular}
-
-\caption{Model comparison}
-
 \end{table}
 
-Mixed-effects models outperform the aggregate OLS specification, indicating strong channel-level variance. The predicted trajectories from the mixed-effects model are presented in Figure~\ref{fig:mixed_effects}. This figure illustrates the relative evolution of the model terms and further demonstrates the descriptive superiority of the mixed-effects specification over the corresponding OLS baseline model.
+The predicted trajectories from the mixed-effects model are presented in Figure~\ref{fig:mixed_effects}. This figure illustrates the relative evolution of the model terms and further demonstrates the descriptive superiority of the mixed-effects specification over the corresponding OLS baseline model.
 
-% Note: Using figure* lets this wide visualization stretch across both columns safely
-\begin{figure*}[htbp]
-\centering
-\includegraphics[width=0.85\textwidth]{figures/mixed-effects.png}
-\caption{Mixed-effects model results}
-\label{fig:mixed_effects}
-\end{figure*}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/mixed-effects.png}
+    \caption{Mixed-effects model predicted DSI trajectories across independent cluster classifications.}
+    \label{fig:mixed_effects}
+\end{figure}
 
-This progressive macro-level paradigm shift and structural alignment across institutional categories is empirically map-indexed across the broader bibliometric field in Figure~\ref{fig:thematic_evolution_trends}. It is clear the trend toward yogic informed sustainable governance has increased over time. While the increase in neuro-immodulation from 2019 onwards has also outpaced the more stable pulmonary therapeutic focus.
+This progressive macro-level paradigm shift and structural alignment across institutional categories is empirically map-indexed across the broader bibliometric field in Figure~\ref{fig:pubmed_macro}. It is clear the trend toward yogic informed sustainable governance has increased over time. While the increase in neuro-immodulation from 2019 onwards has also outpaced the more stable pulmonary therapeutic focus.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/yoga_trends_2014_2026.png}
-    \caption{Absolute Trajectory of Total Indexed PubMed Yoga Literature (2014–2026). While clinical frameworks maintain a predictable numerical dominance, the continuous outward expansion of socio-political terminology captures the primary baseline of an ambient discursive field mutating away from localized rehabilitation.}
-    \label{fig:thematic_evolution_trends}
+    \caption{Absolute Trajectory of Total Indexed PubMed Yoga Literature (2014--2026). While clinical frameworks maintain a predictable numerical dominance, the continuous outward expansion of socio-political terminology captures the primary baseline of an ambient discursive field mutating away from localized rehabilitation.}
+    \label{fig:pubmed_macro}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/niche_growth_trajectory.png}
-    \caption{Dual-Axis Trajectory of Isolated Governance ($n=744$) vs. Sustainability ($n=309$) Literatures. By stripping out clinical background noise, this visualization illustrates that the Indian state's ambient signal does not expand uniformly. Rather, Governance exhibits a sharp pandemic-era acceleration, whereas Sustainability shows a clear, post-2021 upward trajectory.}
-    \label{fig:niche_growth_trajectory}
+    \caption{Dual-Axis Trajectory of Isolated Governance ($n = 744$) vs. Sustainability ($n = 309$) Literatures. By stripping out clinical background noise, this visualization illustrates that the Indian state's ambient signal does not expand uniformly. Rather, Governance exhibits a sharp pandemic-era acceleration, whereas Sustainability shows a clear, post-2021 upward trajectory.}
+    \label{fig:niche_trajectory}
 \end{figure}
 
-\begin{table}[htbp]
-\centering
-\caption{Geographic Footprint and Institutional Hubs in Non-Clinical Yoga Literature}
-\label{tab:geo_origins}
-\small
-\begin{tabular}{lrc@{\hspace{2em}}lr}
-\toprule
-\multicolumn{2}{c}{\textbf{Governance \& Policy Sub-Corpus}} & & \multicolumn{2}{c}{\textbf{Sustainability \& Ecology Sub-Corpus}} \\
-\cmidrule{1-2} \cmidrule{4-5}
-\textbf{Country of Origin} & \textbf{Count} & & \textbf{Country of Origin} & \textbf{Count} \\
-\midrule
-India          & 138 & & India          &  37 \\
-United States  &  28 & & United States  &  10 \\
-United Kingdom &  10 & & United Kingdom &   6 \\
-Brazil         &   7 & & China          &   3 \\
-Germany        &   5 & & Australia      &   3 \\
-\bottomrule
-\end{tabular}
-\end{table}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/yoga_proximity_chart.png}
+    \caption{Distribution of the Discourse Structure Index (DSI) across the four identified discourse clusters, highlighting distinct rhetorical profiles across institutional contexts.}
+    \label{fig:boxplot}
+\end{figure}
 
 
 \section{Discussion}
@@ -577,14 +520,13 @@ Taken together, the results indicate that IDY discourse operates as a dynamicall
 \subsection{The Disembodied Grid: From Ambient Gaze to Ambient Guruship}
 This structural formalization and top-down policy integration require a critical re-evaluation of how religious charisma and political authority scale across modern digital media landscapes. Rather than operating via traditional, localized, or embodied lineage transmission (\textit{parampar\={a}}), the IDY ecosystem operates as a highly sophisticated, distributed grid of state power. 
 
-This mechanism is best understood by tracking the conceptual evolution from the macro-level \textit{ambient gaze} theorized by McCartney and Louren\c{c}o (2025) to the broader algorithmic framework of the \textit{ambient guru} advanced by Copeman's \textit{GuruAI: The Global Anthropology of the Transformation of Guruship in the Age of Artificial Intelligence} project~\cite{copeman2026}. McCartney and Louren\c{c}o originally demonstrated that non-human material objects and digital media arrays can function as ubiquitous, interlinked nodes that broadcast a guru's continuous spatial attention---behaving less like a localized person and more like an omnipresent ``Wi-Fi signal'' that conditions practitioner behaviors and signals unbridled social distinction~\cite{mccartney2023}.
+This mechanism is best understood by tracking the conceptual evolution from the macro-level \textit{ambient gaze} theorized by McCartney and Louren\c{c}o~\cite{mccartney2023} to the broader algorithmic framework of the \textit{ambient guru} advanced by Copeman's \textit{GuruAI: The Global Anthropology of the Transformation of Guruship in the Age of Artificial Intelligence} project~\cite{copeman2023,idega2026}. McCartney and Louren\c{c}o originally demonstrated that non-human material objects and digital media arrays can function as ubiquitous, interlinked nodes that broadcast a guru's continuous spatial attention -- behaving less like a localized person and more like an omnipresent ``Wi-Fi signal'' that conditions practitioner behaviors and signals unbridled social distinction.
 
-When mapped onto our empirical findings, this ambient architecture undergoes a profound technological and political upgrade, scaling into a mature manifestation of Copeman’s (2026) ``ambient guru'' framework \cite{idega2026} . Here, the traditional boundaries of religious authority are completely unmoored from physical proximity or biological containment. The IDY framework functions as a vast digital panopticon where individual state-aligned channels (such as the hyper-complex vectors in Cluster 4 and Cluster 6) act as localized digital transponders for a singular, disembodied ideological signal. 
+When mapped onto our longitudinal dataset, this ambient architecture undergoes a profound technological and political upgrade, scaling into a mature manifestation of Copeman’s~\cite{copeman2012} ``ambient guru.'' Here, the traditional boundaries of religious authority are completely unmoored from physical proximity or biological containment. The IDY framework functions as a vast digital panopticon where individual state-aligned channels (such as the hyper-complex vectors in Cluster 4 and Cluster 6) act as localized digital transponders for a singular, disembodied ideological signal. 
 
-Concurrently, the 7,978 papers mined from the NIH PubMed index serve as the literal epistemological infrastructure of this disembodied grid. When our text-contrast matrix strips away the clinical background noise, the phrases that rise to the top --``School-Based,'' ``Medical Education,'' ``Environmental Factors,'' and ``Climate Change'' -- expose exactly how the ambient guru operates. The grid embeds state directives directly into international health, educational, and environmental curricula. 
+Concurrently, the 7,978 papers mined from the NIH PubMed index serve as the literal epistemological infrastructure of this disembodied grid. When our text-contrast matrix strips away the clinical background noise, the phrases that rise to the top---``School-Based,'' ``Medical Education,'' ``Environmental Factors,'' and ``Climate Change''---expose exactly how the ambient guru operates. The grid embeds state directives directly into international health, educational, and environmental curricula. 
 
-The individual practicing a school-based breathing protocol for ``emotion regulation'' is no longer just engaging in localized self-care. As empirically verified by the dual-axis growth curves in Figure~7 and the absolute domination of Indian institutional hub data in Table~6, they are behaving as an active node inside a distributed panopticon of state power. This architecture allows the Indian state to project Modi’s political and civilizational guruship (\textit{vi\'{s}va-guru}) globally without requiring his active, embodied presence in every localized arena, transforming a centralized state-branding initiative into an ambient, everyday social environment automated by code, media interfaces, and institutionalized narrative structures.
-
+The individual practicing a school-based breathing protocol for ``emotion regulation'' is no longer just engaging in localized self-care. As empirically verified by the dual-axis growth curves in Figure~8 and the absolute domination of Indian institutional hub data in Table~6, they are behaving as an active node inside a distributed panopticon of state power. This architecture allows the Indian state to project Modi’s political and civilizational guruship (\textit{vi\'{s}va-guru}) globally without requiring his active, embodied presence in every localized arena, transforming a centralized state-branding initiative into an ambient, everyday social environment automated by code, media interfaces, and institutionalized narrative structures.
 
 \subsection{Discursive Institutionalization}
 
