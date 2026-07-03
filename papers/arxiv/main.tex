@@ -368,7 +368,7 @@ Third, a dual-axis line plotting pipeline was executed via \texttt{matplotlib} t
 \end{figure}
 
 \subsection{H1: Institutional Partitioning Across Discourse Clusters}
-Aligned with H1, our empirical modeling provides robust evidence demonstrating that the identified discourse clusters are structurally partitioned, exhibiting highly significant differences in the Discourse Structure Index (DSI). The distribution of DSI values across the independent discourse communities is visualised in the boxplot distribution of Figure~\ref{fig:boxplot}, illustrating substantial rhetorical stratification across institutional environments. 
+Aligned with H1, our empirical modeling provides robust evidence demonstrating that the identified discourse clusters are structurally partitioned, exhibiting highly significant differences in the Discourse Structure Index (DSI). The distribution of DSI values across the independent discourse communities is visualised in the boxplot distribution of Figure~\ref{fig:boxplot_distribution}, illustrating substantial rhetorical stratification across institutional environments. 
 
 The omnibus effect of cluster membership on DSI scores is confirmed by a one-way Analysis of Variance (ANOVA), which indicates a highly significant division of communication types across the IDY ecosystem:
 \begin{equation}
@@ -379,7 +379,7 @@ Furthermore, post-hoc Tukey Honest Significant Difference (HSD) pairwise compari
 \subsection{H2: Discursive Formalization Over Time}
 The linear modeling strongly supports hypothesis H2, demonstrating that the macro-level discourse structure exhibits a statistically significant, positive relationship with time over the twelve-year observation window. The Ordinary Least Squares (OLS) model shows a clear temporal trend in DSI values across the study's trajectory ($\rho = 0.248$, $p < 0.001$), illustrating that the aggregate communicative field undergoes systematic narrative consolidation and formalization as the state-sponsored signal stabilizes globally. 
 
-This longitudinal evolution is structurally mapped across the aggregate timeline in Figure~\ref{fig:temporal_dsi}. As further cross-validated by the macro-level bibliometric data in Figure~\ref{fig:pubmed_macro}, the field systematically transitions away from early, foundational wellness claims toward complex, international governance architectures. By using accessible, organic linguistic baselines as a rhetorical bridge to systematically integrate formal macro-policy concepts, this long-term trend reflects the progressive institutionalization of a state-prescribed apologia designed to reposition yoga as an active variable in global environmental frameworks.
+This longitudinal evolution is structurally mapped across the aggregate timeline in Figure~\ref{fig:temporal_dsi}. As further cross-validated by the macro-level bibliometric data in Figure~\ref{fig:pubmed_macro_trajectory}, the field systematically transitions away from early, foundational wellness claims toward complex, international governance architectures. By using accessible, organic linguistic baselines as a rhetorical bridge to systematically integrate formal macro-policy concepts, this long-term trend reflects the progressive institutionalization of a state-prescribed apologia designed to reposition yoga as an active variable in global environmental frameworks.
 
 \begin{figure}[htbp]
     \centering
@@ -391,9 +391,9 @@ This longitudinal evolution is structurally mapped across the aggregate timeline
 \subsection{H3: Segmented Trajectories and Discursive Fragmentation}
 Crucially, the inclusion of cluster-by-time interaction terms and multi-level mixed-effects models provides robust backing for H3, revealing that this discursive formalization process does not advance uniformly, but fragments along strict institutional boundaries. The integration of interaction terms yields a statistically superior model fit, demonstrating heterogeneous longitudinal slopes across distinct sub-communities. 
 
-These parallel but divergent evolutionary pathways are visualized in the predicted mixed-effects trajectories of Figure~\ref{fig:mixed_effects} and the temporal cluster-year heat matrix of Figure~\ref{fig:heatmap}. State-aligned policy tracks and international diplomatic entities (Cluster~4 and Cluster~6) exhibit powerful, statistically significant positive trends over time, aggressively intensifying their structural integration of macro-governance and planetary stewardship language. In stark contrast, commercial wellness circles and grassroots yoga organizations (Cluster~2) remain statically flat and static across the 2014--2026 window, reiterating basic, metaphor-driven slogans in a repetitive, mantra-like fashion. 
+These parallel but divergent evolutionary pathways are visualized in the predicted mixed-effects trajectories of Figure~\ref{fig:mixed_effects_chart} and the temporal cluster-year heat matrix of Figure~\ref{fig:density_heatmap}. State-aligned policy tracks and international diplomatic entities (Cluster~4 and Cluster~6) exhibit powerful, statistically significant positive trends over time, aggressively intensifying their structural integration of macro-governance and planetary stewardship language. In stark contrast, commercial wellness circles and grassroots yoga organizations (Cluster~2) remain statically flat and static across the 2014--2026 window, reiterating basic, metaphor-driven slogans in a repetitive, mantra-like fashion. 
 
-This deep institutional partitioning is further cross-validated by the non-clinical bibliometric growth curves in Figure~\ref{fig:niche_trajectory}. While Governance shows a sharp pandemic-era acceleration tied to institutional health mandates, Sustainability displays a distinct post-2021 upward trajectory, mathematically proving that the ambient ideological signal undergoes significant structural diffraction as it migrates into global public, educational, and ecological infrastructure.
+This deep institutional partitioning is further cross-validated by the non-clinical bibliometric growth curves in Figure~\ref{fig:niche_axis_trajectory}. While Governance shows a sharp pandemic-era acceleration tied to institutional health mandates, Sustainability displays a distinct post-2021 upward trajectory, mathematically proving that the ambient ideological signal undergoes significant structural diffraction as it migrates into global public, educational, and ecological infrastructure.
 
 \subsection{Cluster Differences}
 Cluster differences are highly significant: $F = 142.62$, $p < 0.001$. Tukey tests confirm strong pairwise differences between most clusters.
@@ -420,29 +420,29 @@ Cluster trajectories differ significantly:
 \subsection{Interaction Model}
 Regression results confirm differential slopes across clusters, indicating heterogeneous temporal development. This is tested using interaction terms between cluster membership and time in the regression model. These interaction effects allow the slope of the DSI to vary by cluster, instead of assuming a single shared trend across the entire corpus. 
 
-The results show that these interaction terms are statistically significant, confirming that clusters follow distinct temporal trajectories. Practically, this means that some discourse communities become more structurally complex over time, while others remain stable or change at different rates. Instead of a single unified developmental pattern, the system is better characterised as a set of parallel but divergent evolutionary paths across institutional discourse types. The differential slopes estimated by the interaction model are presented in Figure~\ref{fig:effect_sizes} and Figure~\ref{fig:heatmap}. The effect-size estimates provide a direct comparison of the magnitude and direction of temporal change across discourse communities.
+The results show that these interaction terms are statistically significant, confirming that clusters follow distinct temporal trajectories. Practically, this means that some discourse communities become more structurally complex over time, while others remain stable or change at different rates. Instead of a single unified developmental pattern, the system is better characterised as a set of parallel but divergent evolutionary paths across institutional discourse types. The differential slopes estimated by the interaction model are presented in Figure~\ref{fig:cohens_d_profiles} and Figure~\ref{fig:density_heatmap}. The effect-size estimates provide a direct comparison of the magnitude and direction of temporal change across discourse communities.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/dsi_distribution_boxplots.png}
     \caption{Effect-size estimates across clusters displaying Cohen's $d$ variation profiles.}
-    \label{fig:effect_sizes}
+    \label{fig:cohens_d_profiles}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/heatmap.png}
     \caption{Cluster-year structure density heatmap tracking longitudinal distribution intensity.}
-    \label{fig:heatmap}
+    \label{fig:density_heatmap}
 \end{figure}
 
 \subsection{Mixed-Effects Model}
-As detailed in Table~\ref{tab:model_comparison}, mixed-effects models outperform the aggregate OLS specification, indicating strong channel-level variance. 
+As detailed in Table~\ref{tab:model_comparison_metrics}, mixed-effects models outperform the aggregate OLS specification, indicating strong channel-level variance. 
 
 \begin{table}[htbp]
 \centering
 \caption{Model comparison metrics between OLS baseline and mixed-effects specifications.}
-\label{tab:model_comparison}
+\label{tab:model_comparison_metrics}
 \begin{tabular}{lcc}
 \toprule
 \textbf{Model} & \textbf{AIC} & \textbf{BIC} \\
@@ -453,36 +453,36 @@ Mixed Effects & 653.45 & 695.78 \\
 \end{tabular}
 \end{table}
 
-The predicted trajectories from the mixed-effects model are presented in Figure~\ref{fig:mixed_effects}. This figure illustrates the relative evolution of the model terms and further demonstrates the descriptive superiority of the mixed-effects specification over the corresponding OLS baseline model.
+The predicted trajectories from the mixed-effects model are presented in Figure~\ref{fig:mixed_effects_chart}. This figure illustrates the relative evolution of the model terms and further demonstrates the descriptive superiority of the mixed-effects specification over the corresponding OLS baseline model.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/mixed-effects.png}
     \caption{Mixed-effects model predicted DSI trajectories across independent cluster classifications.}
-    \label{fig:mixed_effects}
+    \label{fig:mixed_effects_chart}
 \end{figure}
 
-This progressive macro-level paradigm shift and structural alignment across institutional categories is empirically map-indexed across the broader bibliometric field in Figure~\ref{fig:pubmed_macro}. It is clear the trend toward yogic informed sustainable governance has increased over time. While the increase in neuro-immodulation from 2019 onwards has also outpaced the more stable pulmonary therapeutic focus.
+This progressive macro-level paradigm shift and structural alignment across institutional categories is empirically map-indexed across the broader bibliometric field in Figure~\ref{fig:pubmed_macro_trajectory}. It is clear the trend toward yogic informed sustainable governance has increased over time. While the increase in neuro-immunomodulation from 2019 onwards has also outpaced the more stable pulmonary therapeutic focus.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/yoga_trends_2014_2026.png}
     \caption{Absolute Trajectory of Total Indexed PubMed Yoga Literature (2014--2026). While clinical frameworks maintain a predictable numerical dominance, the continuous outward expansion of socio-political terminology captures the primary baseline of an ambient discursive field mutating away from localized rehabilitation.}
-    \label{fig:pubmed_macro}
+    \label{fig:pubmed_macro_trajectory}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/niche_growth_trajectory.png}
     \caption{Dual-Axis Trajectory of Isolated Governance ($n = 744$) vs. Sustainability ($n = 309$) Literatures. By stripping out clinical background noise, this visualization illustrates that the Indian state's ambient signal does not expand uniformly. Rather, Governance exhibits a sharp pandemic-era acceleration, whereas Sustainability shows a clear, post-2021 upward trajectory.}
-    \label{fig:niche_trajectory}
+    \label{fig:niche_axis_trajectory}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/yoga_proximity_chart.png}
     \caption{Distribution of the Discourse Structure Index (DSI) across the four identified discourse clusters, highlighting distinct rhetorical profiles across institutional contexts.}
-    \label{fig:boxplot}
+    \label{fig:boxplot_distribution}
 \end{figure}
 
 
