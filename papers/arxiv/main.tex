@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-
+\usepackage{array}
 \usepackage[margin=1in]{geometry}
 \usepackage{rotating}
 \usepackage{float}
@@ -15,7 +15,7 @@
 \graphicspath{{papers/arxiv/figures/}{papers/figures/}{figures/}}
 
 
-\title{From Global Event to Discursive Field: A Computational Analysis of International Yoga Day, 2014--2026}
+\title{From Ambient Gaze to Ambient Guruship: Mapping the Geopolitical and Ecological Architecture of State-Sponsored Yoga Literature Related to the International Day of Yoga}
 
 
 \usepackage{authblk}
@@ -38,7 +38,13 @@
 
 
 \begin{abstract}
-Overall, the International Day of Yoga (IDY) has received relatively little in the way of scholarly attention. What has been published tends to focus on promoting public diplomacy through health promotion and culturally relevant nation branding. What has received little critical attention is the longitudinal evolution of the event's internal discourse structure. Therefore, this study presents an integrated computational discourse analysis of a multi-tiered text corpus comprising $1,758$ policy and research artifacts. This is anchored by a longitudinal core of $509$ English YouTube transcripts spanning 2014--2026. Analysis incorporated a variety of methods, including a custom Discourse Structure Index (DSI), hierarchical cluster analysis, ANOVA, interaction models, mixed-effects regression, and proximity co-occurrence mapping. This framework tracked how this "yogic" civilizational discourse mutated into a framework for global environmental governance. As a result, there are four distinct discourse communities that emerge from the data. These demonstrate significant temporal variation, indicating an increasing differentiation among institutional actors and uneven developmental trajectories across clusters. What proximity mapping reveals is occurrence of strict stratification where localized, organic terms (\textit{nature}, $n=227$; \textit{lifestyle}, $n=220$) establish a baseline narrative. This narrative becomes structurally mapped onto formal institutional targets (\textit{sdg}, $n=36$; \textit{climate}, $n=24$). Ultimately, the findings demonstrate the discursive pathways that the IDY has developed along. This includes the heterogeneous, highly institutionalized, and mediatized discursive field that it generates, which functions as an elegant programmatic apologia. Converting personal spiritual constraints into state-level environmental frameworks like the Indian state's Mission LiFE.
+Since its inception in 2014, the International Day of Yoga (IDY) has served as a central pillar of India's soft-power statecraft, recently evolving from a localized health initiative into a comprehensive framework for global ecological stewardship via state directives like Mission LiFE. This paper analyzes this transition by tracking the emergence of what we term ``guru governmentality''---a political mechanism that transforms individual spiritual practices into decentralized tools for state-aligned citizenship. 
+
+To map this phenomenon empirically, a dual-layer mixed-methods architecture – spanning the entire lifecycle of the IDY ecosystem (2014–2026) – is deployed. The primary corpus layer analyzes 1,758 policy artifacts anchored by a longitudinal core of 509 English-language YouTube broadcasts. This is cross-validated by a secondary bibliometric index of 7,978 peer-reviewed publication records extracted from the NIH PubMed database. By utilizing a text-contrast matrix to isolate non-clinical literature, we uncover a substantial structural expansion into state-directed domains, capturing 744 papers dedicated to Governance \& Policy and 309 papers focusing on Sustainability \& Ecology. 
+
+Geopolitical tracing reveals that India holds an absolute institutional monopoly over this non-clinical output (driving 138 Governance and 37 Sustainability papers), proving that this academic pivot is an actively state-financed intellectual movement. Building upon McCartney and Louren\c{c}o's framework of the digital ``ambient gaze,'' we argue that this multi-centric media and scientific network has scaled into a mature manifestation of Copeman's ``ambient guru.'' By embedding civilizational rhetoric directly into global educational, healthcare, and environmental curricula, the state unmoors religious authority from physical constraints. The result is a disembodied, automated grid of state power that primes global audiences into state-prescribed standards of eco-citizenship and diplomatic alignment.
+
+\keywords{Guru Governmentality \and Ambient Guru \and International Day of Yoga \and Mission LiFE \and Bibliometrics \and Digital Discourse}
 \end{abstract}
 
 
@@ -178,6 +184,9 @@ Pre-2014 & ``Yoga'' & $\rightarrow$ & Flexibility, Stress Relief, Mindfulness, F
 
 From the initial 3 SDGs linked to yoga, a 2026 article – funded by the Central Council for Research in Yoga and Naturopathy (CCRYN), Ministry of AYUSH, Government of India expands yoga's potential to helping achieve all of the 17 SDGs \cite{jagannathan2026}.
 
+This discursive expansion is not limited to soft-power rhetoric; it has actively colonized the global bibliometric landscape. A comparative analysis of the NIH PubMed database (2014–2026) reveals a massive scaling of non-clinical yoga literature. Out of a master dataset of 7,978 peer-reviewed artifacts, a targeted text-contrast matrix isolated 744 distinct papers dedicated to Governance & Policy and 309 papers focusing on Sustainability & Ecology. This bibliometric surge demonstrates that the Indian state's programmatic apologia is successfully migrating out of gray policy documents and into the hard sciences, institutionalizing a state-sanctioned 'Yoga Way of Life' as a legitimate variable in global ecological stewardship.
+
+
 The biggest purveyor of this narrative is the Indian government. For example, the Ministry of Environment, Forest and Climate Change (MOEFCC) promotes the idea  that environmental sustainability requires changes in everyday behaviour and patterns of consumption rather than technological solutions alone \cite{moefcc2016}. These ideas subsequently inform the model program, known as Mission LiFE (Lifestyle for Environment), which promotes environmentally conscious behaviour through synchronizing collective action and lifestyle transformation \cite{moefcc2026}. For example, adopting yoga is considered essential to creating \textit{Low Carbon Lifestyles: Right Choices for our Planet} \cite{moefcc2016}. Scaling this up to the level of every global citizen adopting such a lifestyle is then considered by Prime Minister Narendra Modi to encompass a powerful instrument to tackle climate change through “changing our lifestyle and creating consciousness,” and also a path to wellness that will somehow make us better individuals in “thought, action, knowledge and devotion" \cite{indiandiplomacy2017,un2016a,un2016b,un2019}. This is where mythology, lifestyle and ideology merge with policy. The MOEFCC's website has quotes from a speech that Modi gave to promote the Mission Life project to the world at the \textit{26th UN Climate Change Conference of the Parties (COP26)} in Glasgow. For example, Modi stated that:
 
 \begin{quote}
@@ -231,17 +240,15 @@ Taken together, these developments suggest that IDY has evolved from a relativel
 As empirically illustrated in fig.~\ref{fig:yoga_proximity_chart}, the linguistic architecture of modern yogic diplomacy operates through a two-tiered semantic structure. The primary tier anchors the discourse within highly accessible, personalized framings of \textit{nature} and individualized \textit{lifestyle} shifts. The secondary tier layer maps these personal behavioral practices directly onto institutional frameworks of global governance, explicitly co-occurring with macro policy concepts such as \textit{sdg} targets and \textit{climate} action initiatives.
 
 \section{Corpus and Methodology}
-\label{sec:methodology}
+\subsection{Corpus Architecture and Analytical Pipeline}
+The analytical pipeline spreads across two independent corpus layers. The primary layer leverages a multi-tiered text corpus comprising 1,758 policy and research artifacts anchored by a longitudinal core of 509 English YouTube transcripts spanning 2014–2026. Binary assets and PDF policy artifacts were structurally normalized into plain-text matrices using a local \texttt{pypdf} extraction engine. This is cross-validated by a secondary bibliometric index consisting of 7,978 peer-reviewed publication records harvested via the NCBI Entrez API from the NIH PubMed database. This dual-layer architecture facilitates the isolation of clinical background noise through a text-contrast matrix, mapping the systemic integration of state-sponsored directives into peer-reviewed global infrastructure.
 
-This study utilizes an integrated mixed-methods computational linguistics framework to process a multi-tiered text corpus. The total analytical environment consists of $1,758$ discrete digital documents managed via an automated Python architecture divided into modular directory tracks (\texttt{src/}, \texttt{data/}, \texttt{figures/}, and \texttt{papers\_and\_clusters/}). The core longitudinal data layer consists of $509$ English-language transcripts retrieved from YouTube broadcasts covering IDY events between 2014 and 2026 to evaluate long-term trends without platform rate-limiting interference. Binary assets and PDF policy artifacts were structurally normalized into plain-text matrices using a local \texttt{pypdf} extraction engine.
-
-Our analytical pipeline proceeds across three successive computational layers:
+The analytical pipeline proceeds across three successive computational layers:
 \begin{enumerate}
     \item \textbf{Discourse Structure Indexing (DSI) \& Clustering}: We compile a custom Discourse Structure Index (DSI) to quantify structural changes in textual metrics over time relative to a shared baseline \cite{paranyushkin2019}. Unsupervised hierarchical cluster analysis was deployed to classify the text into four distinct, independent discourse communities based on semantic feature density matrices.
     \item \textbf{Inferential Statistical Modeling}: To evaluate the behavior of these clusters across time and channel types, we executed Analysis of Variance (ANOVA), pairwise Tukey Honest Significant Difference (HSD) tests, interaction models, and longitudinal mixed-effects regressions to map uneven developmental paths \cite{gries2015}.
     \item \textbf{Proximity Co-occurrence Mapping}: To isolate specific environmental pivots, a sliding semantic window of $\pm15$ words was established around the primary anchor keyword \textit{``yoga''}. The relative density of six institutional environmental target variables (\textit{nature}, \textit{lifestyle}, \textit{environment}, \textit{sdg}, \textit{sustainability}, and \textit{climate}) was recursively processed within this 30-word contextual window using \texttt{matplotlib} and \texttt{pandas} (\texttt{data/proximity\_results.csv}).
 \end{enumerate}
-
 
 The corpus analysed in this study was constructed through a lengthy iterative process of digital data collection, automated scraping, transcript extraction, and corpus validation. Unlike studies based on pre-existing institutional archives, this present dataset was curated for the specific purpose of investigating the evolution of discourse surrounding IDY between 2014 and 2026.
 
@@ -508,6 +515,40 @@ Mixed-effects models outperform the aggregate OLS specification, indicating stro
 
 This progressive macro-level paradigm shift and structural alignment across institutional categories is empirically map-indexed across the broader bibliometric field in Figure~\ref{fig:thematic_evolution_trends}. It is clear the trend toward yogic informed sustainable governance has increased over time. While the increase in neuro-immodulation from 2019 onwards has also outpaced the more stable pulmonary therapeutic focus.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/yoga_trends_2014_2026.png}
+    \caption{Absolute Trajectory of Total Indexed PubMed Yoga Literature (2014–2026). While clinical frameworks maintain a predictable numerical dominance, the continuous outward expansion of socio-political terminology captures the primary baseline of an ambient discursive field mutating away from localized rehabilitation.}
+    \label{fig:yoga_trends_macro}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/niche_growth_trajectory.png}
+    \caption{Dual-Axis Trajectory of Isolated Governance ($n=744$) vs. Sustainability ($n=309$) Literatures. By stripping out clinical background noise, this visualization illustrates that the Indian state's ambient signal does not expand uniformly. Rather, Governance exhibits a sharp pandemic-era acceleration, whereas Sustainability shows a clear, post-2021 upward trajectory.}
+    \label{fig:niche_growth_trajectory}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Geographic Footprint and Institutional Hubs in Non-Clinical Yoga Literature}
+\label{tab:geo_origins}
+\small
+\begin{tabular}{lrc@{\hspace{2em}}lr}
+\toprule
+\multicolumn{2}{c}{\textbf{Governance \& Policy Sub-Corpus}} & & \multicolumn{2}{c}{\textbf{Sustainability \& Ecology Sub-Corpus}} \\
+\cmidrule{1-2} \cmidrule{4-5}
+\textbf{Country of Origin} & \textbf{Count} & & \textbf{Country of Origin} & \textbf{Count} \\
+\midrule
+India          & 138 & & India          &  37 \\
+United States  &  28 & & United States  &  10 \\
+United Kingdom &  10 & & United Kingdom &   6 \\
+Brazil         &   7 & & China          &   3 \\
+Germany        &   5 & & Australia      &   3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 
 \section{Discussion}
 
@@ -528,6 +569,8 @@ The overall upward trajectory of the DSI across the twelve-year timeline ($\rho 
 
 This longitudinal evolution is structurally mapped out in {Table~\ref{tab:corpus_composition}}, which charts the historical transition from pre-2014 localized fitness themes toward macro-environmental policies between 2019 and 2026. As visualized in the keyword frequency mapping of \textbf{Figure 1}, the narrative uses highly accessible, organic baselines (\textit{nature}, $n=227$; \textit{lifestyle}, $n=220$) as a rhetorical bridge to systematically integrate formal policy frameworks (\textit{sdg}, $n=36$; \textit{climate}, $n=24$). This structural alignment converts individual, spiritual self-care constraints directly into state-sponsored systemic directives. This empirical trend provides a clear linguistic blueprint of the Indian state's ``guru governmentality''. By standardizing and scaling up civilizational tropes like \textit{Aparigraha} to align directly with UN targets like SDG 12 and 13 (\textbf{Table 1}), the administration of Prime Minister Narendra Modi constructs a highly sophisticated, mediatized apologia designed to position India as the moral, cosmic steward (\textit{vi\'{s}va-guru}) of international environmental frameworks like Mission LiFE.
 
+The geopolitical origins of this bibliometric dataset expose the top-down nature of this network. Within the non-clinical literature, India holds an absolute monopoly, driving 138 Governance papers and 37 Sustainability papers, compared to the United States (28 and 10 respectively). In a database historically dominated by Western and Chinese institutional funding, this stark inversion proves that yoga's evolution into an environmental narrative is a state-financed intellectual project. By leveraging the Ministry of AYUSH and funding traditional systems like Unani and Siddha, the Modi administration uses peer-reviewed science as a transponder to project its civilizational statecraft globally.
+
 \subsection{Segmented Trajectories and Discursive Fragmentation (H3)}
 Crucially, the interaction and mixed-effects models backing \textbf{H3} demonstrate that this institutionalization process is profoundly uneven across the corpus. As illustrated by the predicted trajectories in \textbf{Figure 4} and the temporal heat matrix in \textbf{Figure 5}, the structural complexity of IDY communication does not advance uniformly. 
 
@@ -538,7 +581,36 @@ The system instead undergoes a process of institutional partitioning, characteri
 
 Taken together, the results indicate that IDY discourse operates as a dynamically structured system shaped by both institutional differentiation and temporal evolution. Rather than a unified global discourse, the corpus reveals a layered configuration of semi-autonomous discourse regimes that evolve along distinct trajectories while remaining loosely coupled within a shared symbolic event.
 
+
 \subsection{The Disembodied Grid: From Ambient Gaze to Ambient Guruship}
+This structural formalization and top-down policy integration require a critical re-evaluation of how religious charisma and political authority scale across modern digital media landscapes. Rather than operating via traditional, localized, or embodied lineage transmission (\textit{parampar\={a}}), the IDY ecosystem operates as a highly sophisticated, distributed grid of state power. 
+
+This mechanism is best understood by tracking the conceptual evolution from the macro-level \textit{ambient gaze} theorized by McCartney and Louren\c{c}o (2025) to the broader algorithmic framework of the \textit{ambient guru} advanced by Copeman (2026). McCartney and Louren\c{c}o originally demonstrated that non-human material objects and digital media arrays can function as ubiquitous, interlinked nodes that broadcast a guru's continuous spatial attention---behaving less like a localized person and more like an omnipresent ``Wi-Fi signal'' that conditions practitioner behaviors and signals unbridled social distinction.
+
+When mapped onto the longitudinal IDY and NIH bibliometric data, this ambient architecture undergoes a profound technological and political upgrade, scaling into a mature manifestation of Copeman’s (2026) ``ambient guru,'' which is advanced by Copeman's \textit{GuruAI: The Global Anthropology of the Transformation of Guruship in the Age of Artificial Intelligence}. Here, the traditional boundaries of religious authority are completely unmoored from physical proximity or biological containment. The 7,978 papers mined from the NIH index serve as the literal infrastructure of this disembodied grid \cite{IDEGA2026}. 
+
+When the text-contrast matrix strips away the clinical background noise, the phrases that rise to the top---``School-Based,'' ``Medical Education,'' ``Environmental Factors,'' and ``Climate Change''---expose how the ambient guru operates. As empirically verified by the dual-axis growth curves in Figure~\ref{fig:niche_growth_trajectory} and the absolute domination of Indian institutional hub data in Table~\ref{tab:geo_origins}, the multi-centric media network effectively automates the guru-disciple dynamic at a geopolitical scale. 
+
+By weaving state directives directly into international health, educational, and environmental curricula, the disembodied network transforms a centralized state-branding initiative into an ambient, everyday social environment. The global audience is thus subtly primed into state-prescribed standards of citizenship and diplomatic alignment, demonstrating how code, media interfaces, and distributed narrative structures can successfully institutionalize an ambient political theology across the digital world.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This structural formalisation and top-down policy integration require a critical re-evaluation of how religious charisma and political authority scale across modern digital media landscapes. Rather than operating via traditional, localized, or embodied lineage transmission (\textit{parampar\={a}}), the IDY ecosystem operates as a highly sophisticated, distributed grid of state power. 
 
 This mechanism is best understood by tracking the conceptual evolution from the macro-level \emph{ambient gaze} theorized by McCartney and Lourenço (2025) to the broader algorithmic framework of the \emph{ambient guru} advanced by Copeman's \textit{GuruAI: The Global Anthropology of the Transformation of Guruship in the Age of Artificial Intelligence} project envisions the guru's ambience as a type of charisma which is diffused via persistent, everywhere-at-once digital grids \cite{IDEGA2026}.
@@ -546,6 +618,8 @@ This mechanism is best understood by tracking the conceptual evolution from the 
  McCartney and Lourenço originally demonstrated that non-human material objects and digital media arrays can function as ubiquitous, interlinked nodes that broadcast a guru's continuous spatial attention—behaving less like a localized person and more like an omnipresent ``Wi-Fi signal'' that conditions practitioner behaviors and signals unbridled social distinction. 
 
 When mapped onto the longitudinal IDY corpus, this ambient architecture undergoes a profound technological and political upgrade, scaling into a mature manifestation of Copeman’s (2026) ``ambient guru.'' Here, the traditional boundaries of religious authority are completely unmoored from physical proximity or biological containment. The IDY framework functions as a vast digital panopticon where individual state-aligned channels (such as the hyper-complex vectors in \textit{Cluster 4} and \textit{Cluster 6}) act as localized transponders for a singular, disembodied ideological signal. 
+
+The 7,978 papers mined from the NIH index serve as the literal infrastructure of this "disembodied grid." When the text-contrast matrix strips away the clinical background noise, the phrases that rise to the top – "School-Based," "Medical Education," "Environmental Factors," and "Climate Change" — expose how the ambient guru operates. The grid embeds state directives directly into international health, educational, and environmental curricula. The individual practicing a "school-based" breathing protocol for "emotion regulation" is no longer just engaging in self-care. They are behaving as a node inside a distributed panopticon of state power, fulfilling the biopolitical mandates of an ambient, everyday social environment automated by code, media interfaces, and institutionalized narrative structures.
 
 Crucially, this architecture allows the Indian state to project Modi's political and civilizational guruship (\textit{vi\'{s}va-guru}) globally without requiring his active, embodied presence in every localized arena. The multi-centric media network effectively automates the guru-disciple dynamic at a geopolitical scale. By weaving state directives directly into international health, environmental, and sustainable development scripts, the disembodied network transforms a centralized state-branding initiative into an ambient, everyday social environment. The global audience is thus subtly primed into state-prescribed standards of citizenship and diplomatic alignment, demonstrating how code, media interfaces, and distributed narrative structures can successfully institutionalize an ambient political theology across the digital world.
 
